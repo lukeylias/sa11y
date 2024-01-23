@@ -26,8 +26,7 @@
           <nav>
             <a href="/index.html"><img src="assets/Sa11y.svg" alt="" /></a>
             <div class="linkWrapper">
-              <a href="/resources.html" class="navLink">Playbook</a>
-              <a href="" class="navLink">Support</a>
+              <a href="" class="navLink">Back to top</a>
             </div>
           </nav>
         </div>
@@ -39,16 +38,122 @@
           <div class="contentWrapper">
             <h1>Simple accessibility guidance</h1>
             <p>
-              Sa11y is a friendly resource that offers simple steps to check
-              website accessibility for accessibility issues.
+              Sa11y is a friendly resource that offers simple steps to check a
+              website for accessibility issues.
             </p>
           </div>
           <img alt="" class="imageWrapper" src="assets/Plan 1.svg" />
         </div>
       </div>
-
       <div class="section bg-alt">
         <div class="grid">
+          <!-- summary -->
+          <div class="contentWrapperSection">
+            <h2>Summary</h2>
+            <p>
+              Make your way down the page, reviewing each step. By the end, you
+              should have completed a thorough accessibility review. Please
+              don't hesitate to reach out if you encounter any issues or find
+              anything unclear.
+            </p>
+          </div>
+          <!-- getting started -->
+          <section class="article-section" id="article-navigation">
+            <h3 class="title">Getting started</h3>
+            <p class="summary">
+              Before you start looking for accessibility issues, here's a quick
+              rundown of what this page is all about and what you'll need to get
+              started.
+            </p>
+            <div class="button-container">
+              <button class="expand-btn" onclick="toggleContent(this)">
+                View details
+                <span class="material-icons">expand_more</span>
+              </button>
+            </div>
+            <div class="additional-content" style="display: none">
+              <!-- Additional content goes here -->
+              <p>
+                To get started, this page is separated into two parts: automated
+                testing and manual testing.
+              </p>
+              <p>
+                This is because some things are easier to check with a tool or
+                extension. They save time and are more efficient when checking
+                certain things. However, these tools can't cover everything and
+                sometimes can miss critical issues, so we complement it with
+                manual checks.
+              </p>
+              <p>
+                Before we get started, we need to download a tool to run our
+                automated tests. We will utilise aXe by Deque University. It's
+                free and runs on your web browser. Go ahead and download it.
+              </p>
+              <p class="link" style="margin-bottom: 24px">
+                <a
+                  rel="noopener"
+                  href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                  target="_blank"
+                  >Download aXe extentsion</a
+                >
+                <span class="material-icons">north_east</span>
+              </p>
+
+              <ol>
+                <p>
+                  Here are the steps to access and run the tool after installing
+                  it:
+                </p>
+                <li>
+                  First, open up your developer tools by using the appropriate
+                  command. This will display all the code used to generate the
+                  web page.
+                </li>
+                <li>
+                  Next, click on the little submenu located in the top right
+                  corner of the page and select the aXe tool from the list.
+                </li>
+                <li>
+                  Click on the "Scan page" button and wait for it to complete
+                  the scan. Any issues detected will be displayed at the bottom
+                  of the page.
+                </li>
+                <p>
+                  Although it may appear overwhelming if lots of issues appear,
+                  we will go through key issues to look out for below.
+                </p>
+                <p>
+                  Now you know how to run the aXe extension let's continue to
+                  the Automated testing.
+                </p>
+              </ol>
+              <h3>Video demo</h3>
+
+              <h3>Helpful resources</h3>
+              <ul>
+                <li><a>Link example</a></li>
+              </ul>
+
+              <!-- <button class="expand-btn" onclick="toggleContent(this)">
+                View details
+                <span class="material-icons">expand_more</span>
+              </button> -->
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="section bg-alt">
+        <div class="grid">
+          <!-- summary -->
+          <div class="contentWrapperSection">
+            <h2>Automated testing</h2>
+            <p>
+              We'll be using the aXe extension for the checks below. Don't
+              worry; we won't be messing with any code - we'll just be opening
+              up developer tools.
+            </p>
+          </div>
+          <!-- getting started -->
           <section class="article-section" id="article-navigation">
             <h3 class="title">Getting started</h3>
             <p class="summary">

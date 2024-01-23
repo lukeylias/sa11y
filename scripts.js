@@ -87,10 +87,10 @@ function toggleContent(buttonElement) {
   icon.textContent = isContentHidden ? "expand_less" : "expand_more";
 
   // If the content is being shown, scroll to the section header
+  // If the content is being shown, scroll to the section header
   if (isContentHidden) {
     setTimeout(() => {
-      const navbarHeight =
-        document.querySelector(".global-nav")?.offsetHeight || 0;
+      const navbarHeight = 80; // Explicitly set the navbar height to 80px
       const tocHeight = document.querySelector(".toc")?.offsetHeight || 0;
       const additionalOffset = 24; // Space above the TOC
 
