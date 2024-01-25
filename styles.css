@@ -17,7 +17,7 @@
   --f-md: clamp(
     0.9rem,
     0.675rem + 1.125vw,
-    1.8rem
+    1.5rem
   ); /* Scaled down from 16px, 32px */
   --f-sm: clamp(
     0.7875rem,
@@ -110,6 +110,9 @@ h2 {
 }
 h3 {
   font-size: var(--f-lg);
+}
+h4 {
+  font-size: var(--f-md);
 }
 p {
   line-height: var(--lh-body);
@@ -317,6 +320,7 @@ li {
 .card-header {
   display: flex;
   align-items: center;
+  margin-bottom: 0;
   /* margin-bottom: 16px; */
 }
 
@@ -325,8 +329,8 @@ li {
   margin-right: 12px; /* Right margin to create space after the icon */
 }
 
-.card-content h3 {
-  line-height: 160%;
+.card-header h4 {
+  margin-bottom: 0;
 }
 
 .summaryContainer {
@@ -579,11 +583,9 @@ code {
 .button-container {
   display: flex;
   float: right;
-  /* justify-content: space-between; */
   gap: 16px;
   grid-column: 1 / -1;
-  /* flex-direction: column;
-  align-items: center; */
+  flex-direction: column; /* Switch to horizontal stacking */
 }
 
 /* Playbook styles  */
@@ -615,6 +617,12 @@ article {
   grid-column: 5 / -1;
   flex-direction: column;
   order: 2;
+}
+
+.article-title {
+  font-size: var(--f-lg);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 16px;
 }
 
 .section-title {
@@ -667,7 +675,7 @@ article {
   min-height: 240px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 720px) {
   :root {
     --num-grid-columns: 8;
   }
@@ -684,6 +692,10 @@ article {
   .expand-btn,
   .link {
     width: auto;
+  }
+
+  .button-container {
+    flex-direction: row; /* Switch to horizontal stacking */
   }
 }
 
@@ -721,8 +733,7 @@ article {
     grid-column: 1 / 7; /* Image moves to the first 6 columns */
   }
 
-  /* .contentWrapper,
-  .imageWrapper {
-    align-self: center;
-  } */
+  .button-container {
+    flex-direction: row; /* Switch to horizontal stacking */
+  }
 }
