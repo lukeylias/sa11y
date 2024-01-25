@@ -1,22 +1,34 @@
 :root {
-  --f-xxl: clamp(2rem, 1.25rem + 3.125vw, 4rem); /* 32px, 64px */
+  --f-xxl: clamp(
+    1.8rem,
+    1.125rem + 2.8125vw,
+    3.6rem
+  ); /* Scaled down from 32px, 64px */
   --f-xl: clamp(
-    1.5rem,
-    0.9285714285714286rem + 2.857142857142857vw,
-    3.2rem
-  ); /* 24px, 56px */
+    1.35rem,
+    0.8357142857142857rem + 2.571428571428571vw,
+    2rem
+  ); /* Scaled down from 24px, 56px */
   --f-lg: clamp(
-    1.125rem,
-    0.6607142857142857rem + 2.3214285714285716vw,
-    2.75rem
-  ); /* 18px, 44px */
-  --f-md: clamp(1rem, 0.75rem + 1.25vw, 2rem); /* 16px, 32px */
-  --f-sm: clamp(0.875rem, 0.75rem + 0.625vw, 1.5rem); /* 14px, 24px */
+    1.0125rem,
+    0.5957142857142858rem + 2.089285714285714vw,
+    1.8rem
+  ); /* Scaled down from 18px, 44px */
+  --f-md: clamp(
+    0.9rem,
+    0.675rem + 1.125vw,
+    1.8rem
+  ); /* Scaled down from 16px, 32px */
+  --f-sm: clamp(
+    0.7875rem,
+    0.675rem + 0.5625vw,
+    1.35rem
+  ); /* Scaled down from 14px, 24px */
   --f-body: clamp(
-    1rem,
-    0.9285714285714286rem + 0.35714285714285715vw,
-    1.25rem
-  ); /* 16px, 20px */
+    0.9rem,
+    0.8357142857142857rem + 0.32142857142857145vw,
+    1.125rem
+  ); /* Scaled down from 16px, 20px */
 
   --lh-headings: 120%;
   --lh-body: 160%;
@@ -66,7 +78,7 @@ main {
 html {
   font-size: 100%;
   box-sizing: border-box;
-  background-color: #f5f0f7;
+  background-color: #fafafc;
   color: #412980;
 }
 
@@ -87,7 +99,7 @@ h3,
 h4 {
   line-height: var(--lh-headings);
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 }
 
 h1 {
@@ -95,6 +107,9 @@ h1 {
 }
 h2 {
   font-size: var(--f-xl);
+}
+h3 {
+  font-size: var(--f-lg);
 }
 p {
   line-height: var(--lh-body);
@@ -127,6 +142,7 @@ nav a {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0;
 }
 
 .link a {
@@ -285,6 +301,40 @@ li {
   list-style-type: circle; /* Changes the bullet style for nested lists */
 }
 
+/* ==========================================================================
+   Card Styles (why it matters card)
+   ========================================================================== */
+
+.card {
+  background-color: #ffd8e4;
+  border-radius: 8px;
+  padding: 16px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  grid-column: span var(--num-grid-columns);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: 16px; */
+}
+
+.material-symbols-outlined {
+  font-size: 32px; /* Size of the icon */
+  margin-right: 12px; /* Right margin to create space after the icon */
+}
+
+.card-content h3 {
+  line-height: 160%;
+}
+
+.summaryContainer {
+  display: flex;
+  align-items: center; /* Vertical alignment */
+  justify-content: center; /* Horizontal alignment */
+}
+
 footer {
   display: flex;
   justify-content: space-between;
@@ -315,6 +365,15 @@ footer {
   height: 80px;
   margin: 0 auto; /* Center the content within the max width */
   padding: 0 24px;
+}
+
+code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace; /* Use a monospaced font */
+  background-color: #ffd8e4; /* Light grey background */
+  color: #412980; /* Dark grey text */
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 18px; /* Optional: Slightly smaller font size for inline code */
 }
 
 .heroTitle {
@@ -356,7 +415,7 @@ footer {
 
 .articleGrid {
   width: 100%;
-  max-width: var(--page-max-width-lg);
+  max-width: var(--page-max-width-md);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   display: grid;
@@ -396,11 +455,6 @@ footer {
   border-radius: 8px;
   padding: 24px;
 }
-.callout,
-h3 {
-  font-size: var(--f-md);
-  margin-bottom: 0%;
-}
 
 .contentWrapper {
   grid-column: span var(--num-grid-columns);
@@ -424,8 +478,37 @@ h3 {
   grid-column: span var(--num-grid-columns);
 }
 
+.summary {
+  margin-top: 0;
+}
+
+.summaryImageWrapper {
+  width: 100%;
+  object-fit: fill;
+  margin-top: 24px;
+  max-width: 100px;
+  /* max-height: 100px; */
+  margin: 0;
+  grid-column: span var(--num-grid-columns);
+  padding-right: 16px;
+}
+
 .image-left {
   grid-column: span 7;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .btnWrapper {
@@ -433,41 +516,72 @@ h3 {
 }
 
 .btn {
-  border-radius: 28px;
-  font-size: 20px;
-  padding: 16px 32px;
-  color: #412980;
-  background-color: #d0bcff;
+  border: #eaddff;
   font-family: "Lato", sans-serif;
-  border: solid 2px #412980;
-  line-height: 24px;
-  cursor: pointer;
-  font-weight: 500;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  font-size: var(--f-body);
+  color: #412980;
+  padding: 8px 16px;
+  min-height: 44px;
+  border-radius: 4px;
+  display: flex;
   align-items: center;
-  box-shadow: 0 4px 0 !important;
+  gap: 8px;
+  cursor: pointer;
+  justify-content: center;
+}
+
+.btn .material-icons {
+  font-size: 24px;
+  color: #412980;
 }
 
 .btn:hover {
-  background-color: #eaddff;
-}
-
-.btn::active {
-  color: #eaddff;
+  background-color: #d0bcff;
 }
 
 .btn:focus {
-  outline-offset: 8px;
+  outline: none;
+  box-shadow: 0 0 0 2px #412980;
+}
+
+.top-btn {
+  width: 100%;
+  background-color: #eaddff;
+  border: none;
+  font-family: "Lato", sans-serif;
+  font-size: var(--f-body);
+  color: #412980;
+  padding: 8px 16px;
+  min-height: 44px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-left: auto;
+  justify-content: center;
+}
+
+.top-btn .material-icons {
+  font-size: 24px;
+  color: #412980;
+}
+
+.top-btn:hover {
+  background-color: #d0bcff;
+}
+
+.top-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #412980;
 }
 
 .button-container {
   display: flex;
-  justify-content: space-between;
+  float: right;
+  /* justify-content: space-between; */
   gap: 16px;
+  grid-column: 1 / -1;
   /* flex-direction: column;
   align-items: center; */
 }
@@ -484,9 +598,9 @@ article {
 }
 
 .article-section {
-  background: #f6f4f4;
-  border: 1px solid #d9d9d9;
-  border-radius: 12px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding: 20px;
   position: relative;
   display: flex;
@@ -524,13 +638,12 @@ article {
   color: #412980;
   padding: 8px 16px;
   min-height: 44px;
-  border-radius: 18px;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
   margin-left: auto;
-  margin-bottom: 10px;
   justify-content: center;
 }
 

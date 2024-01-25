@@ -46,11 +46,11 @@
         </div>
       </div>
       <div class="section bg-alt">
-        <div class="grid">
+        <div class="articleGrid">
           <!-- summary -->
-          <div class="contentWrapperSection">
-            <h2>Summary</h2>
-            <p>
+          <div class="card summaryContainer">
+            <img alt="" class="summaryImageWrapper" src="assets/wave.svg" />
+            <p style="line-height: var(--lh-body)">
               Make your way down the page, reviewing each step. By the end, you
               should have completed a thorough accessibility review. Please
               don't hesitate to reach out if you encounter any issues or find
@@ -59,7 +59,7 @@
           </div>
           <!-- getting started -->
           <section class="article-section" id="article-navigation">
-            <h3 class="title">Getting started</h3>
+            <h3>Getting started</h3>
             <p class="summary">
               Before you start looking for accessibility issues, here's a quick
               rundown of what this page is all about and what you'll need to get
@@ -127,23 +127,38 @@
                   the Automated testing.
                 </p>
               </ol>
-              <h3>Video demo</h3>
 
               <h3>Helpful resources</h3>
               <ul>
-                <li><a>Link example</a></li>
+                <li>
+                  <p class="link" style="margin-bottom: 24px">
+                    <a
+                      rel="noopener"
+                      href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                      target="_blank"
+                      >Watch video demo</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="link" style="margin-bottom: 24px">
+                    <a
+                      rel="noopener"
+                      href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                      target="_blank"
+                      >Download aXe extentsion</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
               </ul>
-
-              <!-- <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button> -->
             </div>
           </section>
         </div>
       </div>
       <div class="section bg-alt">
-        <div class="grid">
+        <div class="articleGrid">
           <!-- summary -->
           <div class="contentWrapperSection">
             <h2>Automated testing</h2>
@@ -153,15 +168,24 @@
               up developer tools.
             </p>
           </div>
-          <!-- getting started -->
+
+          <!-- Alt text-->
           <section class="article-section" id="article-navigation">
-            <h3 class="title">Getting started</h3>
+            <h3>Alt text for images</h3>
             <p class="summary">
-              Before you start looking for accessibility issues, here's a quick
-              rundown of what this page is all about and what you'll need to get
-              started.
+              Images must be identified as meaningful or decorative.
             </p>
             <div class="button-container">
+              <p class="link">
+                <a
+                  rel="noopener"
+                  href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                  target="_blank"
+                  >Non-text Content (Level A)</a
+                >
+                <span class="material-icons">north_east</span>
+              </p>
+
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
@@ -169,72 +193,101 @@
             </div>
             <div class="additional-content" style="display: none">
               <!-- Additional content goes here -->
-              <p>
-                To get started, this page is separated into two parts: automated
-                testing and manual testing.
-              </p>
-              <p>
-                This is because some things are easier to check with a tool or
-                extension. They save time and are more efficient when checking
-                certain things. However, these tools can't cover everything and
-                sometimes can miss critical issues, so we complement it with
-                manual checks.
-              </p>
-              <p>
-                Before we get started, we need to download a tool to run our
-                automated tests. We will utilise aXe by Deque University. It's
-                free and runs on your web browser. Go ahead and download it.
-              </p>
-              <p class="link" style="margin-bottom: 24px">
-                <a
-                  rel="noopener"
-                  href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
-                  target="_blank"
-                  >Download aXe extentsion</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-
               <ol>
-                <p>
-                  Here are the steps to access and run the tool after installing
-                  it:
-                </p>
+                <li>Run the aXe accessibility tool.</li>
                 <li>
-                  First, open up your developer tools by using the appropriate
-                  command. This will display all the code used to generate the
-                  web page.
+                  Check the following;
+                  <ul>
+                    <li>
+                      Images that convey information unavailable through other
+                      content should have an alt tag.
+                      <ul>
+                        Meaningful:
+                        <code>Alt="What gets read goes here"</code>
+                      </ul>
+                    </li>
+                    <li>
+                      Images that provide no information, such as illustrations,
+                      must be coded as decorative.
+                      <ul>
+                        Decorative:
+                        <code>Alt=""</code>
+                      </ul>
+                    </li>
+                    <li>
+                      The rule of thumb used to determine whether an image is
+                      informative is to remove it from the screen: if I am
+                      missing information because the image is gone, then it
+                      means the image is informative and needs alt text.
+                    </li>
+                    <li>
+                      Check any images with alt text are descriptive and
+                      relevant. This requires some manual intervention, but we
+                      want to ensure alt text is accurate.
+                    </li>
+                  </ul>
                 </li>
-                <li>
-                  Next, click on the little submenu located in the top right
-                  corner of the page and select the aXe tool from the list.
-                </li>
-                <li>
-                  Click on the "Scan page" button and wait for it to complete
-                  the scan. Any issues detected will be displayed at the bottom
-                  of the page.
-                </li>
-                <p>
-                  Although it may appear overwhelming if lots of issues appear,
-                  we will go through key issues to look out for below.
-                </p>
-                <p>
-                  Now you know how to run the aXe extension let's continue to
-                  the Automated testing.
-                </p>
               </ol>
+              <div class="card">
+                <div class="card-header">
+                  <span class="material-symbols-outlined"> cognition </span>
+                  <h4>Why it matters</h4>
+                </div>
+                <p class="card-content">
+                  Many people, including those who are blind or who have low
+                  vision or hand tremors, rely on a keyboard (or keyboard
+                  alternate) to access those components. So it's important that
+                  they can access all the interactive elements on the page.
+                </p>
+              </div>
 
               <h3>Helpful resources</h3>
               <ul>
-                <li><a>Link example</a></li>
+                <li>
+                  <p class="link" style="margin-bottom: 24px">
+                    <a
+                      rel="noopener"
+                      href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                      target="_blank"
+                      >Watch video demo</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="link" style="margin-bottom: 24px">
+                    <a
+                      rel="noopener"
+                      href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                      target="_blank"
+                      >Download aXe extentsion</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
               </ul>
-
-              <!-- <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button> -->
             </div>
           </section>
+        </div>
+        <div class="articleGrid">
+          <div class="contentWrapperSection">
+            <p>
+              This page does not guarantee your website is accessible. However,
+              addressing the issues found will improve the user experience for
+              everyone.
+            </p>
+            <p>
+              Our recommendations leverage WCAG best practices, industry
+              experience, academic research, and data insights.
+            </p>
+          </div>
+
+          <div class="button-container">
+            <button class="top-btn" onclick="scrollToTop()">
+              Back to top
+              <span class="material-symbols-outlined"> arrow_upward </span>
+            </button>
+          </div>
         </div>
       </div>
     </main>
