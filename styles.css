@@ -557,13 +557,22 @@ code {
   box-shadow: 0 0 0 2px #412980;
 }
 
-.button-container {
+/* .button-container {
   display: flex;
   float: right;
   gap: 16px;
   grid-column: 1 / -1;
-  flex-direction: column; /* Switch to horizontal stacking */
+  flex-direction: column; 
   width: 100%;
+} */
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Aligns items to the right */
+  gap: 16px;
+  grid-column: 1 / -1;
+  flex-direction: row; /* Ensure items are in a row */
+  align-items: center; /* Aligns items vertically */
 }
 
 /* Playbook styles  */
@@ -629,7 +638,6 @@ article {
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  margin-left: auto;
   justify-content: center;
 }
 
@@ -643,6 +651,39 @@ article {
 }
 
 .expand-btn:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px #412980; /* Example: custom focus style */
+}
+
+/* Secondary Button Styles */
+.secondary-btn {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  font-family: "Lato", sans-serif;
+  font-size: var(--f-body);
+  color: #412980;
+  padding: 8px 16px;
+  min-height: 44px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  margin-left: auto;
+  justify-content: center;
+  width: 100%;
+}
+
+.secondary-btn .material-icons {
+  font-size: 24px;
+  color: #412980;
+}
+
+.secondary-btn:hover {
+  background-color: #fafafc;
+}
+
+.secondary-btn:focus {
   outline: none; /* Remove default focus outline */
   box-shadow: 0 0 0 2px #412980; /* Example: custom focus style */
 }
@@ -691,7 +732,8 @@ article {
   }
 
   .expand-btn,
-  .link {
+  .link,
+  .secondary-btn {
     width: auto;
   }
 
