@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sa11y</title>
+    <title>Sa11y – Accessibility guidance</title>
     <link rel="stylesheet" href="styles.css" />
     <link
       rel="stylesheet"
@@ -168,9 +168,9 @@
       </div>
       <div class="section bg-alt">
         <div class="articleGrid">
-          <!-- summary -->
+          <!-- Automated reviews -->
           <div class="contentWrapperSection">
-            <h2>Automated testing</h2>
+            <h2>Automated review</h2>
             <p>
               We'll be using the aXe extension for the checks below. Don't
               worry; we won't be messing with any code - we'll just be opening
@@ -188,7 +188,7 @@
               <p class="link">
                 <a
                   rel="noopener"
-                  href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                  href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
                   target="_blank"
                   >Non-text Content (Level A)</a
                 >
@@ -284,7 +284,302 @@
               </ul>
             </div>
           </section>
+
+          <!-- Headings and structure -->
+          <section class="article-section" id="article-navigation">
+            <h2>Headings and structure</h2>
+            <p class="summary">
+              Headings should form a hierarchy and ensure heading levels aren't
+              skipped.
+            </p>
+            <div class="button-container">
+              <p class="link">
+                <a
+                  rel="noopener"
+                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+                  target="_blank"
+                  >Info and Relationships (Level A)</a
+                >
+                <span class="material-icons">north_east</span>
+              </p>
+              <button
+                class="secondary-btn"
+                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
+                aria-label="Watch video demo (opens in a new tab)"
+              >
+                Watch video demo
+                <span class="material-icons">play_arrow</span>
+              </button>
+              <button class="expand-btn" onclick="toggleContent(this)">
+                View details
+                <span class="material-icons">expand_more</span>
+              </button>
+            </div>
+            <div class="additional-content" style="display: none">
+              <!-- Additional content goes here -->
+              <ol>
+                <li>Run the aXe accessibility tool.</li>
+                <li>
+                  Check if any Heading issues appear:
+                  <ul>
+                    <li>Headings should follow order (h1, h2, h3 etc)</li>
+                    <li>
+                      Headings should follow how you would read the page's
+                      content.
+                    </li>
+                    <li>
+                      Headings shouldn't skip levels (h1 to h3, for example)
+                    </li>
+                    <li>
+                      Headings of the same level should have the same font style
+                      (look).
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <div class="card">
+                <div class="card-header">
+                  <span class="material-symbols-outlined">verified</span>
+                  <h3>Why this helps</h3>
+                </div>
+                <p class="card-content">
+                  Heading levels help convey the relative importance of headings
+                  on a webpage. People with good eyesight can distinguish the
+                  importance of a heading by its visual appearance, with
+                  higher-level headings generally having greater visual
+                  prominence than lower-level ones. <br />
+                  On the other hand, users of assistive technology rely on
+                  programmatic cues to perceive heading levels.
+                </p>
+              </div>
+
+              <h3>Helpful resources</h3>
+              <ul>
+                <li>
+                  <p class="link">
+                    <a
+                      rel="noopener"
+                      href="https://blog.hubspot.com/marketing/image-alt-text"
+                      target="_blank"
+                      >Image Alt Text: What It Is and how to write it</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="link">
+                    <a
+                      rel="noopener"
+                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                      target="_blank"
+                      >Intro to accessible content – Guide Dogs Australia</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Colour contrast -->
+          <section class="article-section" id="article-navigation">
+            <h2>Colour contrast</h2>
+            <p class="summary">
+              Text should have sufficient contrast against the background to
+              ensure readability.
+            </p>
+            <div class="button-container">
+              <p class="link">
+                <a
+                  rel="noopener"
+                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+                  target="_blank"
+                  >Info and Relationships (Level A)</a
+                >
+                <span class="material-icons">north_east</span>
+              </p>
+              <button
+                class="secondary-btn"
+                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
+                aria-label="Watch video demo (opens in a new tab)"
+              >
+                Watch video demo
+                <span class="material-icons">play_arrow</span>
+              </button>
+              <button class="expand-btn" onclick="toggleContent(this)">
+                View details
+                <span class="material-icons">expand_more</span>
+              </button>
+            </div>
+            <div class="additional-content" style="display: none">
+              <!-- Additional content goes here -->
+              <ol>
+                <li>Run the aXe accessibility tool.</li>
+                <li>
+                  Check if any Heading issues appear:
+                  <ul>
+                    <li>Headings should follow order (h1, h2, h3 etc)</li>
+                    <li>
+                      Headings should follow how you would read the page's
+                      content.
+                    </li>
+                    <li>
+                      Headings shouldn't skip levels (h1 to h3, for example)
+                    </li>
+                    <li>
+                      Headings of the same level should have the same font style
+                      (look).
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <div class="card">
+                <div class="card-header">
+                  <span class="material-symbols-outlined">verified</span>
+                  <h3>Why this helps</h3>
+                </div>
+                <p class="card-content">
+                  The readability of your content is greatly influenced by its
+                  contrast. It is essential for users with low vision or colour
+                  blindness. A good colour contrast will make your content
+                  accessible to everyone, regardless of the device or lighting
+                  in their surroundings.
+                </p>
+              </div>
+
+              <h3>Helpful resources</h3>
+              <ul>
+                <li>
+                  <p class="link">
+                    <a
+                      rel="noopener"
+                      href="https://blog.hubspot.com/marketing/image-alt-text"
+                      target="_blank"
+                      >Image Alt Text: What It Is and how to write it</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="link">
+                    <a
+                      rel="noopener"
+                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                      target="_blank"
+                      >Intro to accessible content – Guide Dogs Australia</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
+
+        <div class="articleGrid">
+          <!-- Manual review -->
+          <div class="contentWrapperSection">
+            <h2>Manual review</h2>
+            <p>
+              The following checks are best done manually; some require you to
+              use a keyboard and visually identify interactive elements.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+          <section class="article-section" id="article-navigation">
+            <h2>Navigation</h2>
+            <p class="summary">
+              Navigate through your site with just a keyboard.
+            </p>
+            <div class="button-container">
+              <p class="link">
+                <a
+                  rel="noopener"
+                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+                  target="_blank"
+                  >Info and Relationships (Level A)</a
+                >
+                <span class="material-icons">north_east</span>
+              </p>
+              <button
+                class="secondary-btn"
+                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
+                aria-label="Watch video demo (opens in a new tab)"
+              >
+                Watch video demo
+                <span class="material-icons">play_arrow</span>
+              </button>
+              <button class="expand-btn" onclick="toggleContent(this)">
+                View details
+                <span class="material-icons">expand_more</span>
+              </button>
+            </div>
+            <div class="additional-content" style="display: none">
+              <!-- Additional content goes here -->
+              <ol>
+                <li>Run the aXe accessibility tool.</li>
+                <li>
+                  Check if any Heading issues appear:
+                  <ul>
+                    <li>Headings should follow order (h1, h2, h3 etc)</li>
+                    <li>
+                      Headings should follow how you would read the page's
+                      content.
+                    </li>
+                    <li>
+                      Headings shouldn't skip levels (h1 to h3, for example)
+                    </li>
+                    <li>
+                      Headings of the same level should have the same font style
+                      (look).
+                    </li>
+                  </ul>
+                </li>
+              </ol>
+              <div class="card">
+                <div class="card-header">
+                  <span class="material-symbols-outlined">verified</span>
+                  <h3>Why this helps</h3>
+                </div>
+                <p class="card-content">
+                  The readability of your content is greatly influenced by its
+                  contrast. It is essential for users with low vision or colour
+                  blindness. A good colour contrast will make your content
+                  accessible to everyone, regardless of the device or lighting
+                  in their surroundings.
+                </p>
+              </div>
+
+              <h3>Helpful resources</h3>
+              <ul>
+                <li>
+                  <p class="link">
+                    <a
+                      rel="noopener"
+                      href="https://blog.hubspot.com/marketing/image-alt-text"
+                      target="_blank"
+                      >Image Alt Text: What It Is and how to write it</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+                <li>
+                  <p class="link">
+                    <a
+                      rel="noopener"
+                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                      target="_blank"
+                      >Intro to accessible content – Guide Dogs Australia</a
+                    >
+                    <span class="material-icons">north_east</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
         <div class="articleGrid">
           <div class="contentWrapperSection disclaimer">
             <p>
