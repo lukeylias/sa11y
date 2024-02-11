@@ -22,8 +22,8 @@
 }
 
 :focus {
-  outline: 4px solid #412980;
-  border-radius: 8px;
+  outline: 2px solid #412980;
+  border-radius: 2px;
 }
 
 ::selection {
@@ -133,6 +133,7 @@ nav a {
   text-underline-offset: 0.1578em;
   padding-left: 0px;
   padding-right: 0px;
+  line-height: 160%;
 }
 
 .link.material-icons {
@@ -246,35 +247,46 @@ li {
 }
 
 .additional-content ol {
-  counter-reset: item; /* Resets the counter */
-  list-style-type: none; /* Removes default numbering */
-  margin-top: 0; /* Removes top margin */
-  padding-left: 0; /* Adjust padding as needed */
+  counter-reset: item;
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 0;
 }
 
 .additional-content ol > li {
-  list-style: none; /* Removes default list style */
-  position: relative; /* Positions the counter relative to the list item */
-  padding-left: 1.5em; /* Provides space for the counter */
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
 }
 
 .additional-content ol > li::before {
-  content: counter(item) ". "; /* Adds a number before each li */
-  counter-increment: item; /* Increments the number for each li */
-  font-weight: bold; /* Makes the number bold */
-  position: absolute; /* Positions the counter absolutely within the list item */
-  left: 0; /* Aligns the counter to the left */
+  content: counter(item) ". ";
+  counter-increment: item;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
-/* This will style the unordered list with bullets */
 .additional-content ul {
-  list-style-type: disc; /* Adds bullets to unordered list items */
-  padding-left: 1.5em; /* Indent the bullets */
+  list-style-type: disc;
+  padding-left: 1.5em;
 }
 
-/* Ensure that the nested ul has a different list style if needed */
 .additional-content ul ul {
-  list-style-type: circle; /* Changes the bullet style for nested lists */
+  list-style-type: circle;
+}
+
+.responsive-image {
+  max-width: 80%; /* Adjust this value as needed */
+  height: auto;
+  margin: 0 auto; /* Centers the image */
+  margin-bottom: 32px;
+  margin-top: 32px;
+  display: block; /* Ensures margin auto has an effect */
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
+    0px 0px 0px 1px rgba(6, 44, 82, 0.1);
 }
 
 /* ==========================================================================
@@ -310,6 +322,7 @@ li {
   display: block;
   align-items: center; /* Vertical alignment */
   justify-content: center; /* Horizontal alignment */
+  margin-bottom: 0;
 }
 
 footer {
@@ -465,13 +478,13 @@ code {
 }
 
 .summaryImageWrapper {
-  width: 100%;
+  min-width: 42px;
   object-fit: fill;
   margin-top: 24px;
-  max-width: 50px;
   margin: 0;
   grid-column: span var(--num-grid-columns);
   padding-right: 16px;
+  display: block;
 }
 
 .image-left {
@@ -711,9 +724,13 @@ article {
 
   .link,
   .top-btn {
-    width: 100%; /* Ensure links and button use full width */
-    text-align: center; /* Center the text within each link/button */
-    margin-bottom: 10px; /* Add some space between stacked items */
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .summaryImageWrapper {
+    display: none;
   }
 }
 
@@ -743,10 +760,6 @@ article {
 
   .summaryContainer {
     display: flex;
-  }
-
-  .summaryImageWrapper {
-    max-width: 100px;
   }
 }
 
