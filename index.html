@@ -71,22 +71,41 @@
               Before you start looking for accessibility issues, let's get set
               up with some tools.
             </p>
+
             <div class="button-container">
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
               </button>
             </div>
+
             <div class="additional-content" style="display: none">
               <!-- Additional content goes here -->
+              <div class="buttonWrapper">
+                <button
+                  id="openVideoBtn"
+                  class="secondary-btn"
+                  aria-label="Watch video demo"
+                  style="margin-left: 0"
+                >
+                  Watch video demo
+                  <span class="material-icons">play_arrow</span>
+                </button>
+              </div>
+
+              <div id="videoContainer" class="video-container video-hidden">
+                <iframe
+                  src="https://www.loom.com/embed/de8a056f45d84c018566bb7e0bc1cb2b"
+                  frameborder="0"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                  title="Video title or description"
+                  class="responsive-iframe"
+                ></iframe>
+              </div>
+              <span class="divider"></span>
+
               <p>
                 To get started, this page is separated into two parts: automated
                 testing and manual testing.
@@ -206,14 +225,6 @@
                 >
                 <span class="material-icons">north_east</span>
               </p>
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
@@ -347,14 +358,6 @@
                 >
                 <span class="material-icons">north_east</span>
               </p>
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
@@ -444,14 +447,6 @@
                 >
                 <span class="material-icons">north_east</span>
               </p>
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
@@ -545,14 +540,6 @@
                 >
                 <span class="material-icons">north_east</span>
               </p>
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
@@ -673,14 +660,6 @@
                 >
                 <span class="material-icons">north_east</span>
               </p>
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
@@ -781,14 +760,6 @@
                 >
                 <span class="material-icons">north_east</span>
               </p>
-              <button
-                class="secondary-btn"
-                onclick="window.open('https://www.loom.com/share/de8a056f45d84c018566bb7e0bc1cb2b?sid=a8d44583-a0f1-4a27-8256-cf748a3a7706', '_blank')"
-                aria-label="Watch video demo (opens in a new tab)"
-              >
-                Watch video demo
-                <span class="material-icons">play_arrow</span>
-              </button>
               <button class="expand-btn" onclick="toggleContent(this)">
                 View details
                 <span class="material-icons">expand_more</span>
