@@ -124,3 +124,12 @@ function scrollToTop() {
     behavior: "smooth",
   });
 }
+
+document.getElementById("openVideoBtn").addEventListener("click", function () {
+  var videoContainer = document.getElementById("videoContainer");
+  if (videoContainer.classList.contains("video-hidden")) {
+    videoContainer.classList.replace("video-hidden", "video-visible");
+  } else {
+    videoContainer.classList.replace("video-visible", "video-hidden");
+  }
+});

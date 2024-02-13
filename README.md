@@ -6,10 +6,7 @@ Sa11y is a helpful tool that provides easy-to-follow steps for beginners to revi
 
 TO-DO
 
-1.
-2.
-3.
-4. Find the best way to add videos (external link vs embeding)
-5. Character limit for optimal reading?
-6. Collect links and resources.
-7. Fix hero break points (should be two)
+    Fix images on mobile size
+    Character limit for optimal reading?
+    Collect links and resources.
+    Fix hero break points (should be two)
