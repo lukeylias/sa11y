@@ -96,13 +96,43 @@ p a {
   line-height: var(--font-size-350);
 }
 
+header {
+  width: 100%;
+}
+
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 100%;
   transition: border-bottom 0.4s;
-  background-color: transparent;
+  background-color: #eaddff;
+}
+
+.navLink:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.1578em;
+}
+
+.navSection {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #eaddff;
+}
+
+.navGrid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 #navbar.scrolled {
@@ -164,12 +194,6 @@ nav a {
   font-weight: 600;
 }
 
-.navLink:hover {
-  text-decoration-line: underline;
-  text-decoration-thickness: 3px;
-  text-underline-offset: 0.1578em;
-}
-
 ol {
   /* font-weight: bold; */
   font-size: var(--f-body);
@@ -211,18 +235,10 @@ li {
 .bg-alt {
   background-color: #fafafa;
 }
-.navSection {
-  padding: 0;
-  margin: 0;
+
+.divider {
+  border-top: 1px solid #d9d9d9;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  top: 0;
-  left: 0; /* Align to the left edge of the viewport */
-  width: 100%;
-  z-index: 1000;
 }
 
 .video-container {
@@ -236,11 +252,6 @@ li {
   width: 100%;
   box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
     0px 0px 0px 1px rgba(6, 44, 82, 0.1);
-}
-
-.divider {
-  border-top: 1px solid #d9d9d9;
-  display: flex;
 }
 
 .video-visible {
@@ -312,12 +323,12 @@ li {
 }
 
 .responsive-image {
-  max-width: 80%; /* Adjust this value as needed */
+  max-width: 80%;
   height: auto;
-  margin: 0 auto; /* Centers the image */
+  margin: 0 auto;
   margin-bottom: 32px;
   margin-top: 32px;
-  display: block; /* Ensures margin auto has an effect */
+  display: block;
   border-radius: 8px;
   position: relative;
   box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
@@ -429,17 +440,6 @@ code {
   padding-right: var(--page-gutter-md);
 }
 
-.navGrid {
-  display: flex;
-  /* justify-content: space-between; */
-  align-items: center;
-  width: 100%;
-  max-width: var(--page-max-width-md);
-  height: 80px;
-  margin: 0 auto; /* Center the content within the max width */
-  padding: 0 24px;
-}
-
 .articleGrid {
   width: 100%;
   max-width: var(--page-max-width-md);
@@ -483,12 +483,18 @@ code {
   padding: 24px;
 }
 
+.imageWrapper,
 .contentWrapper {
   grid-column: span var(--num-grid-columns);
+}
+
+.contentWrapper {
+  /* grid-column: span var(--num-grid-columns); */
   display: flex; /* Enable flexbox */
   flex-direction: column; /* Stack children vertically */
   justify-content: center;
   /* align-items: center;  */
+  text-align: center;
   height: 100%;
 }
 
@@ -509,7 +515,7 @@ code {
   max-width: 678px;
   max-height: 440px;
   margin: 0;
-  grid-column: span var(--num-grid-columns);
+  /* grid-column: span var(--num-grid-columns); */
 }
 
 .summaryImageWrapper {
@@ -605,25 +611,15 @@ code {
   box-shadow: 0 0 0 2px #412980;
 }
 
-/* .button-container {
-  display: flex;
-  float: right;
-  gap: 16px;
-  grid-column: 1 / -1;
-  flex-direction: column; 
-  width: 100%;
-} */
-
 .button-container {
   display: flex;
-  justify-content: flex-end; /* Aligns items to the right */
+  justify-content: flex-end;
   gap: 16px;
   grid-column: 1 / -1;
-  flex-direction: row; /* Ensure items are in a row */
-  align-items: center; /* Aligns items vertically */
+  flex-direction: row;
+  align-items: center;
 }
 
-/* Playbook styles  */
 article {
   padding: 20px;
   box-sizing: border-box;
@@ -671,7 +667,6 @@ article {
   margin-bottom: 34px;
 }
 
-/* Expand Button Styles */
 .expand-btn {
   width: 100%;
   background-color: #eaddff;
@@ -700,11 +695,10 @@ article {
 }
 
 .expand-btn:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px #412980; /* Example: custom focus style */
+  outline: none;
+  box-shadow: 0 0 0 2px #412980;
 }
 
-/* Secondary Button Styles */
 .secondary-btn {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -733,8 +727,8 @@ article {
 }
 
 .secondary-btn:focus {
-  outline: none; /* Remove default focus outline */
-  box-shadow: 0 0 0 2px #412980; /* Example: custom focus style */
+  outline: none;
+  box-shadow: 0 0 0 2px #412980;
 }
 
 .tocWrapper {
@@ -746,16 +740,15 @@ article {
 @media screen and (max-width: 719px) {
   .footerSection,
   .footerGrid {
-    /* Adjusts the footer layout for smaller screens */
     flex-direction: column;
-    align-items: center; /* Ensure items are centered when stacked */
-    height: auto; /* Allows the footer to expand based on content */
+    align-items: center;
+    height: auto;
   }
 
   .button-container {
-    flex-direction: column; /* Stack buttons vertically */
-    width: 100%; /* Use full width to accommodate all items */
-    margin-top: 20px; /* Add some space at the top if needed */
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
   }
 
   .link,
@@ -779,9 +772,12 @@ article {
     grid-template-columns: repeat(var(--num-grid-columns), 1fr);
   }
 
-  .contentWrapper,
+  .contentWrapper {
+    grid-column: 2 / span 6;
+  }
+
   .imageWrapper {
-    grid-column: span 5;
+    grid-column: 2 / span 6;
   }
 
   .expand-btn,
@@ -791,7 +787,7 @@ article {
   }
 
   .button-container {
-    flex-direction: row; /* Switch to horizontal stacking */
+    flex-direction: row;
   }
 
   .summaryContainer {
@@ -806,10 +802,45 @@ article {
 
   .grid {
     grid-template-columns: repeat(var(--num-grid-columns), 1fr);
-    /* align-items: center; */
     justify-items: center;
     padding-left: var(--page-gutter-lg);
     padding-right: var(--page-gutter-lg);
+  }
+
+  .contentWrapper {
+    grid-column: 1 / span 5;
+    text-align: left;
+  }
+
+  .contentWrapper.long {
+    grid-column: 5 / -1;
+  }
+
+  .imageWrapper {
+    grid-column: 7 / -1;
+  }
+
+  /* Ensure these styles are tailored to maintain the layout for larger screens */
+  .button-container {
+    flex-direction: row;
+  }
+}
+
+/* @media screen and (min-width: 1024px) {
+  :root {
+    --num-grid-columns: 12;
+  }
+
+  .grid {
+    grid-template-columns: repeat(var(--num-grid-columns), 1fr);
+    justify-items: center;
+    padding-left: var(--page-gutter-lg);
+    padding-right: var(--page-gutter-lg);
+  }
+
+  .contentWrapper,
+  .imageWrapper {
+    grid-column: span var(--num-grid-columns);
   }
 
   .contentWrapper {
@@ -824,16 +855,7 @@ article {
     grid-column: 7 / -1;
   }
 
-  .grid.swapped .contentWrapper {
-    grid-column: 9 / -1; /* Content moves to the last 4 columns */
-    order: 2;
-  }
-
-  .grid.swapped .imageWrapper {
-    grid-column: 1 / 7; /* Image moves to the first 6 columns */
-  }
-
   .button-container {
-    flex-direction: row; /* Switch to horizontal stacking */
+    flex-direction: row;
   }
-}
+} */
