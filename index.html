@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sa11y: Simple Accessibility Guidance for Beginners</title>
+    <title>Sa11y - Simple Accessibility Guidance for Beginners</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
@@ -784,28 +784,54 @@
             </div>
             <div class="additional-content" style="display: none">
               <!-- Additional content goes here -->
-              <p>
-                Check each link to see if it has an accessible name that
-                describes its purpose.
-              </p>
               <ol>
                 <li>
-                  If a link leads to a document or web page, the name is of the
-                  page is sufficient.
+                  Ensure labels are positioned close to their inputs for clear
+                  visual cues.
+
+                  <img
+                    src="assets/scan.png"
+                    alt="Screenshot of how to open developer tools"
+                    class="responsive-image"
+                  />
+                </li>
+                <li>
+                  Check that inputs do not rely solely on placeholder text for
+                  labelling, as placeholders are not a substitute for labels and
+                  can pose accessibility issues.
+
+                  <img
+                    src="assets/scan.png"
+                    alt="Screenshot of how to open developer tools"
+                    class="responsive-image"
+                  />
+                </li>
+
+                <li>
+                  When an input field is focused, ensure the label does not
+                  obscure the input or disappear, which can disorient users.
+
+                  <img
+                    src="assets/scan.png"
+                    alt="Screenshot of how to open developer tools"
+                    class="responsive-image"
+                  />
                 </li>
               </ol>
+
               <div class="card">
                 <div class="card-header">
                   <span class="material-symbols-outlined">verified</span>
                   <h3>Why this helps</h3>
                 </div>
                 <p class="card-content">
-                  It is important for users to understand the purpose of a link
-                  before deciding whether to follow it. When the text of the
-                  link is unclear, sighted users can use the context around it
-                  to get an idea of what it means. Similarly, assistive
-                  technologies can help non-sighted users by providing them with
-                  the link's related context.
+                  Clear form labels are vital for all users to fill out forms
+                  correctly. Labels give sighted users a visual cue connecting
+                  text to input fields. For those with assistive technology,
+                  labels provide necessary context for each input. This ensures
+                  all users can interact with forms effectively, reducing
+                  errors. Clear labels are also essential for speech recognition
+                  software users to control form elements with voice commands.
                 </p>
               </div>
 
