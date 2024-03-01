@@ -6,7 +6,11 @@ Sa11y is a helpful tool that provides easy-to-follow steps for beginners to revi
 
 TO-DO
 
-    Fix images on mobile size
-    Character limit for optimal reading?
-    Collect links and resources.
-    Fix hero break points (should be two)
+    Responsive nav
+    nav bar
+    hero
+    footer
+    feedback section
+    section links
+    better image examples
+    content review

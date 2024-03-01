@@ -34,862 +34,258 @@
   </head>
   <body>
     <header>
-      <div class="navSection" id="navbar">
-        <div class="navGrid">
-          <nav>
-            <img src="assets/Sa11y.svg" alt="" />
-          </nav>
+      <nav class="site-header">
+        <div class="container">
+          <div class="logo-container">
+            <!-- Assuming sa11y is your logo text; you can also use an image if you have a logo graphic -->
+            <p class="mini-logo">sa11y</p>
+          </div>
+          <!-- If you plan to add navigation links, they can be included here -->
         </div>
+      </nav>
+      <div class="hero">
+        <img src="assets/logo-large.svg" alt="" />
+        <h1>sa11y</h1>
+        <p class="summary">
+          Sa11y is a helpful tool that provides easy-to-follow steps for
+          <strong class="italic">beginners</strong> to review a website for
+          accessibility issues.
+        </p>
       </div>
     </header>
     <main>
-      <div class="section hero">
-        <div class="grid">
-          <div class="contentWrapper">
-            <h1>Simple accessibility guidance</h1>
-            <p>
-              Sa11y is a helpful tool that provides easy-to-follow steps for
-              beginners to review a website for accessibility issues.
-            </p>
-          </div>
-          <img alt="" class="imageWrapper" src="assets/Plan 1.svg" />
-        </div>
-      </div>
-      <div class="section bg-alt">
-        <div class="articleGrid">
-          <!-- summary -->
+      <div class="container">
+        <article class="article-flex">
+          <h2>Setting up</h2>
+          <p>
+            Before we get started, we need to download a tool to run our
+            automated tests. We will utilise aXe by Deque University. It's free
+            and runs on your web browser. Go ahead and download it.
+          </p>
+          <a href="www.google.com">Download aXe extension</a>
+          <p>
+            After you have installed it, let's run-through how to use it. First,
+            we need access to the developer tools.
+          </p>
+          <p>
+            <strong>Keyboard Shortcut: </strong>Open the Developer Tools by
+            pressing:
+          </p>
+          <ul>
+            <li><strong>Mac: </strong><kbd>CMD + SHIFT + i</kbd></li>
+            <li><strong>Windows : </strong><kbd>CTRL + SHIFT + i</kbd></li>
+          </ul>
+          <p>
+            <strong>Alternatively: </strong>Right-click anywhere on the webpage
+            and select "Inspect" or "Inspect Element" (depending on the
+            browser).
+          </p>
+          <aside class="responsive-image">
+            <img src="assets/inspect.png" alt="" />
+          </aside>
+          <div class="content-divider"></div>
+          <h2 id="alt-text">Alt text</h2>
+          <p>
+            Ensuring images have descriptive text, also known as alt text, is
+            crucial for web accessibility.
+          </p>
+          <p>
+            Alt text provides a textual alternative to the content of an image,
+            allowing users who are blind or visually impaired to understand the
+            image's meaning using screen readers or other assistive
+            technologies. It also helps with SEO and improves the overall
+            accessibility of your website for all users.
+          </p>
+          <h3>How to check:</h3>
+          <strong>Automated check:</strong>
+          <ol>
+            <li>Run the aXe extension.</li>
+            <li>Check for any issues refering to <strong>Alt text</strong></li>
+          </ol>
 
-          <div class="contentWrapperSection">
-            <h2>Getting started</h2>
-            <div class="card summaryContainer">
-              <img alt="" class="summaryImageWrapper" src="assets/wave.svg" />
-              <p>
-                Make your way down the page, reviewing each step. By the end,
-                you should have completed a thorough accessibility review.
-                Please don't hesitate to reach out if you encounter any issues
-                or find anything unclear.
-              </p>
+          <strong>Manual check:</strong>
+          <ol>
+            <li>
+              <strong>Right-click</strong> on the image you want to check,
+              select <strong>inspect</strong> or
+              <strong>inspect element</strong> (depending on the browser)
+            </li>
+            <li>
+              While hovering over the image with your cursor, you will get a
+              preview which will show wether or not the image has alt text.
+            </li>
+          </ol>
+          <aside class="responsive-image">
+            <img src="assets/image-preview.png" alt="" />
+          </aside>
+          <h3>Best practices</h3>
+          <ul>
+            <li>
+              Images that convey information unavailable through other content
+              should have an alt tag. <br /><strong>Meaningful: </strong
+              ><code>Alt="What gets read goes here"</code>
+            </li>
+            <li>
+              Images that provide no information, such as illustrations, must be
+              coded as decorative. <br /><strong>Decorative: </strong
+              ><code>Alt=""</code>
+            </li>
+            <li>
+              The rule of thumb used to determine whether an image is
+              informative is to remove it from the screen: if I am missing
+              information because the image is gone, then it means the image is
+              informative and needs alt text.
+            </li>
+            <li>
+              Check any images with alt text are descriptive and relevant. This
+              requires some manual intervention, but we want to ensure alt text
+              is accurate.
+            </li>
+          </ul>
+          <p>Let's run through an example below.</p>
+          <aside class="responsive-image">
+            <img src="assets/CathyFreeman_5.jpeg" alt="" />
+          </aside>
+          <strong>Good alt text: </strong>
+          <p>
+            <code>
+              alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing
+              her iconic green and gold body suit and white cap, dominating the
+              track event with fierce competition in the backdrop."</code
+            >
+          </p>
+          <strong>Poor alt text: </strong>
+          <p><code>alt="A group of marathon runners."</code></p>
+          <strong>Bad alt text: </strong>
+          <p><code>alt="image2343.jpeg"</code></p>
+          <p class="italic">
+            Avoid at all cost using the image name as alt text.
+          </p>
+          <aside class="callout callout-information">
+            <div class="icon-wrapper">
+              <i class="material-icons">favorite</i>
             </div>
-          </div>
-
-          <!-- getting started -->
-          <section class="article-section" id="article-navigation">
-            <h3>Setting up</h3>
-            <p>
-              Before you start looking for accessibility issues, let's get set
-              up with some tools.
-            </p>
-
-            <div class="button-container">
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
+            <strong>Why this helps</strong>
+            <div>
+              <span class="callout-content"
+                >It can be difficult for individuals who are visually impaired
+                to interpret images. Correct markup and good text alternatives
+                make them accessible to everyone. Actual text is better than
+                images of text because it can be adjusted for legibility.</span
+              >
             </div>
-
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-              <div class="buttonWrapper">
-                <button
-                  id="openVideoBtn"
-                  class="secondary-btn"
-                  aria-label="Watch video demo"
-                  style="margin-left: 0"
-                >
-                  Watch video demo
-                  <span class="material-icons">play_arrow</span>
-                </button>
-              </div>
-
-              <div id="videoContainer" class="video-container video-hidden">
-                <iframe
-                  src="https://www.loom.com/embed/de8a056f45d84c018566bb7e0bc1cb2b"
-                  frameborder="0"
-                  webkitallowfullscreen
-                  mozallowfullscreen
-                  allowfullscreen
-                  title="Video title or description"
-                  class="responsive-iframe"
-                ></iframe>
-              </div>
-              <span class="divider"></span>
-
-              <p>
-                To get started, this page is separated into two parts: automated
-                testing and manual testing.
-              </p>
-              <p>
-                This is because some things are easier to check with a tool or
-                extension. They save time and are more efficient when checking
-                certain things. However, these tools can't cover everything and
-                sometimes can miss critical issues, so we complement it with
-                manual checks.
-              </p>
-              <p>
-                Before we get started, we need to download a tool to run our
-                automated tests. We will utilise aXe by Deque University. It's
-                free and runs on your web browser. Go ahead and download it.
-              </p>
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
-                  target="_blank"
-                  >Download aXe extentsion</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <p>
-                Here are the steps to access and run the tool after installing
-                it:
-              </p>
-
-              <ol>
-                <li>
-                  <p>
-                    First, open up your developer tools by using the
-                    <strong>(CMD + SHIFT + i)</strong> for mac or
-                    <strong>(WINDOWS + SHIFT + i)</strong> for windows. This
-                    will display all the code used to generate the web page. You
-                    can also <strong>(RIGHT-CLICK)</strong> anywhere on the
-                    screen and select <strong>"Inspect"</strong>.
-                  </p>
-                  <img
-                    src="assets/inspect.png"
-                    alt="Screenshot of how to open developer tools"
-                    class="responsive-image"
-                  />
-                </li>
-                <li>
-                  <p>
-                    Next, click on the little submenu located in the top right
-                    corner of the page and select the aXe tool from the list.
-                  </p>
-                  <img
-                    src="assets/run-tool.png"
-                    alt="Screenshot of how to open developer tools"
-                    class="responsive-image"
-                  />
-                </li>
-                <li>
-                  <p>
-                    Click on the "Scan page" button and wait for it to complete
-                    the scan. Any issues detected will be displayed at the
-                    bottom of the page.
-                  </p>
-                  <img
-                    src="assets/scan.png"
-                    alt="Screenshot of how to open developer tools"
-                    class="responsive-image"
-                  />
-                </li>
-              </ol>
-              <p>
-                Although it may appear overwhelming if lots of issues appear, we
-                will go through key issues to look out for below.
-              </p>
-
-              <p>
-                Now you know how to run the aXe extension let's continue to the
-                Automated testing.
-              </p>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
-                      target="_blank"
-                      >Download aXe extentsion</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
+          </aside>
+          <h3>Additional resources</h3>
+          <ul>
+            <li>
+              <a href="">link example</a>
+            </li>
+            <li>
+              <a href="">link example</a>
+            </li>
+          </ul>
+          <div class="content-divider"></div>
+          <h2 id="headings-and-structure">Headings and structure</h2>
+          <p>
+            Headings structure your web page content, organizing it into a
+            hierarchy and making it easier for users to navigate and understand.
+          </p>
+          <p>
+            They also play a crucial role in SEO. Ensuring headings follow a
+            logical structure, with proper nesting (H1, H2, H3, etc.), is
+            essential for accessibility.
+          </p>
+          <p>
+            Users who rely on assistive technologies, such as screen readers,
+            navigate web pages primarily using headings. A logical heading
+            structure allows them to efficiently grasp the page's content and
+            organization.
+          </p>
+          <h3>How to review</h3>
+          <strong>Automated check:</strong>
+          <ol>
+            <li>Run the aXe extension.</li>
+            <li>
+              Check for any issues refering to
+              <strong>headings or heading order.</strong>
+            </li>
+          </ol>
+          <strong>Manual check:</strong>
+          <ol>
+            <li>
+              <strong>Right-click</strong> on a heading to reveal a preview
+              panel to identiy heading styles.
+            </li>
+          </ol>
+          <h3>Best practices</h3>
+          <ul>
+            <li>
+              Ensure headings follow a logical hierarchy (H1, H2, H3, etc.).
+            </li>
+            <li>
+              Headings should not skip levels (e.g., H1 to H3). Headings of the
+              same level should look similar.
+            </li>
+          </ul>
+          <aside class="callout callout-information">
+            <div class="icon-wrapper">
+              <i class="material-icons">favorite</i>
             </div>
-          </section>
-        </div>
-      </div>
-      <div class="section bg-alt">
-        <div class="articleGrid">
-          <!-- Automated reviews -->
-          <div class="contentWrapperSection">
-            <h2>Automated review</h2>
-            <p>
-              We'll be using the aXe extension for the checks below. Don't
-              worry; we won't be messing with any code - we'll just be opening
-              up developer tools.
-            </p>
-          </div>
-
-          <!-- Alt text-->
-          <section class="article-section" id="article-navigation">
-            <h3>Alt text for images</h3>
-            <p class="summary">
-              Images must be identified as meaningful or decorative.
-            </p>
-            <div class="button-container">
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
-                  target="_blank"
-                  >Non-text Content (Level A)</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
+            <strong>Why this helps</strong>
+            <div>
+              <span class="callout-content"
+                >Heading levels help convey the relative importance of headings
+                on a webpage. People with good eyesight can distinguish the
+                importance of a heading by its visual appearance, with
+                higher-level headings generally having greater visual prominence
+                than lower-level ones.</span
+              >
             </div>
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-
-              <ol>
-                <li>Run the aXe accessibility tool.</li>
-                <li>
-                  Check the following:
-                  <ul>
-                    <li>
-                      Images that convey information unavailable through other
-                      content should have an alt tag.
-                      <ul>
-                        <li>
-                          Meaningful:
-                          <code>Alt="What gets read goes here"</code>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      Images that provide no information, such as illustrations,
-                      must be coded as decorative.
-                      <ul>
-                        <li>Decorative: <code>Alt=""</code></li>
-                      </ul>
-                    </li>
-                    <li>
-                      The rule of thumb used to determine whether an image is
-                      informative is to remove it from the screen: if I am
-                      missing information because the image is gone, then it
-                      means the image is informative and needs alt text.
-                    </li>
-                    <li>
-                      Check any images with alt text are descriptive and
-                      relevant. This requires some manual intervention, but we
-                      want to ensure alt text is accurate.
-                    </li>
-                  </ul>
-                </li>
-              </ol>
-              <img
-                src="assets/CathyFreeman_5.jpeg"
-                alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing her iconic green and gold body suit and white cap, dominating the track event with fierce competition in the backdrop."
-                class="responsive-image"
-              />
-
-              <p>
-                Let's use the above image to see and example of Bad and Good alt
-                text;
-              </p>
-              <ul>
-                <li>
-                  <strong>Bad Alt text:</strong> "A group of marathon runners."
-                </li>
-                <li>
-                  <strong>Good Alt text:</strong> "Cathy Freeman in action at
-                  the 2000 Sydney Olympics, wearing her iconic green and gold
-                  body suit and white cap, dominating the track event with
-                  fierce competition in the backdrop."
-                </li>
-              </ul>
-
-              <div class="card">
-                <div class="card-header">
-                  <span class="material-symbols-outlined">verified</span>
-                  <h3>Why this helps</h3>
-                </div>
-                <p class="card-content">
-                  It can be difficult for individuals who are visually impaired
-                  to interpret images. Correct markup and good text alternatives
-                  make them accessible to everyone. Actual text is better than
-                  images of text because it can be adjusted for legibility.
-                </p>
-              </div>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://blog.hubspot.com/marketing/image-alt-text"
-                      target="_blank"
-                      >Image Alt Text: What It Is and how to write it</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
-                      target="_blank"
-                      >Intro to accessible content – Guide Dogs Australia</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://www.stylemanual.gov.au/content-types/images/alt-text-captions-and-titles-images"
-                      target="_blank"
-                      >Australian Goverment – Style manual</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Headings and structure -->
-          <section class="article-section" id="article-navigation">
-            <h3>Headings and structure</h3>
-            <p class="summary">
-              Headings should form a hierarchy and ensure heading levels aren't
-              skipped.
-            </p>
-            <div class="button-container">
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
-                  target="_blank"
-                  >Info and Relationships (Level A)</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
-            </div>
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-              <ol>
-                <li>Run the aXe accessibility tool.</li>
-                <li>
-                  Check if any Heading issues appear:
-                  <ul>
-                    <li>Headings should follow order (h1, h2, h3, etc).</li>
-                    <li>
-                      Headings should follow how you would read the page's
-                      content.
-                    </li>
-                    <li>
-                      Headings shouldn't skip levels (h1 to h3, for example).
-                    </li>
-                    <li>
-                      Headings of the same level should have the same font style
-                      (look).
-                    </li>
-                  </ul>
-                </li>
-              </ol>
-
-              <div class="card">
-                <div class="card-header">
-                  <span class="material-symbols-outlined">verified</span>
-                  <h3>Why this helps</h3>
-                </div>
-                <p class="card-content">
-                  Heading levels help convey the relative importance of headings
-                  on a webpage. People with good eyesight can distinguish the
-                  importance of a heading by its visual appearance, with
-                  higher-level headings generally having greater visual
-                  prominence than lower-level ones. <br />
-                  On the other hand, users of assistive technology rely on
-                  programmatic cues to perceive heading levels.
-                </p>
-              </div>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://blog.hubspot.com/marketing/image-alt-text"
-                      target="_blank"
-                      >Image Alt Text: What It Is and how to write it</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
-                      target="_blank"
-                      >Intro to accessible content – Guide Dogs Australia</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Colour contrast -->
-          <section class="article-section" id="article-navigation">
-            <h3>Colour contrast</h3>
-            <p class="summary">
-              Text should have sufficient contrast against the background to
-              ensure readability.
-            </p>
-            <div class="button-container">
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
-                  target="_blank"
-                  >Info and Relationships (Level A)</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
-            </div>
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-              <ol>
-                <li>Run the aXe accessibility tool.</li>
-                <li>
-                  Check if any colour contrast issues appear:
-                  <ul>
-                    <li>
-                      Ensure elements are in their default state (not disabled
-                      or selected, without mouseover or input focus).
-                    </li>
-                    <li>
-                      No minimum contrast ratio is required if a component is in
-                      an inactive/disabled state.
-                    </li>
-                  </ul>
-                </li>
-              </ol>
-
-              <div class="card">
-                <div class="card-header">
-                  <span class="material-symbols-outlined">verified</span>
-                  <h3>Why this helps</h3>
-                </div>
-                <p class="card-content">
-                  The readability of your content is greatly influenced by its
-                  contrast. It is essential for users with low vision or colour
-                  blindness. A good colour contrast will make your content
-                  accessible to everyone, regardless of the device or lighting
-                  in their surroundings.
-                </p>
-              </div>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://blog.hubspot.com/marketing/image-alt-text"
-                      target="_blank"
-                      >Image Alt Text: What It Is and how to write it</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
-                      target="_blank"
-                      >Intro to accessible content – Guide Dogs Australia</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-
-        <div class="articleGrid">
-          <!-- Manual review -->
-          <div class="contentWrapperSection">
-            <h2>Manual review</h2>
-            <p>
-              The following checks are best done manually; some require you to
-              use a keyboard and visually identify interactive elements.
-            </p>
-          </div>
-
-          <!-- Navigation -->
-          <section class="article-section" id="article-navigation">
-            <h3>Navigation</h3>
-            <p class="summary">
-              Navigate through your site with just a keyboard.
-            </p>
-            <div class="button-container">
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
-                  target="_blank"
-                  >Info and Relationships (Level A)</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
-            </div>
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-              <p>
-                This page has four points to review. We will go through them one
-                by one for this demonstration. As you become more comfortable,
-                you can review them all at once.
-              </p>
-              <ol>
-                <li>
-                  <strong>Keyboard navigation:</strong>
-                  <ul>
-                    Check that all interactive elements (buttons, links, or
-                    anything that can be interacted with) can be reached using
-                    the tab and arrow keys. Can you navigate through the whole
-                    page with just the keyboard?
-                  </ul>
-                </li>
-                <li>
-                  <strong>Focus indicators:</strong>
-                  <ul>
-                    Make sure all interactive elements have a visual indicator
-                    when in focus. This is typically a border or colour change
-                    when tabbed through. See image below for example.
-                  </ul>
-                </li>
-                <img
-                  src="assets/focus example.svg"
-                  alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing her iconic green and gold body suit and white cap, dominating the track event with fierce competition in the backdrop."
-                  class="responsive-image"
-                />
-                <li>
-                  <strong>Tab order:</strong>
-                  <ul>
-                    As you tab through your page, check the order is consistent
-                    with the visual, logical order. Does the order in which you
-                    tabbed follow a similar order in how you would read the
-                    content on the page?
-                  </ul>
-                </li>
-                <img
-                  src="assets/tab-order.png"
-                  alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing her iconic green and gold body suit and white cap, dominating the track event with fierce competition in the backdrop."
-                  class="responsive-image"
-                />
-                <li>
-                  <strong>Keyboard traps:</strong>
-                  <ul>
-                    Keyboard traps are when you tab into an element with no way
-                    out. Commonly found with Date pickers and modals that take
-                    over the focus. Just double-check that you can tab through
-                    the whole page without getting trapped.
-                  </ul>
-                </li>
-              </ol>
-
-              <div class="card">
-                <div class="card-header">
-                  <span class="material-symbols-outlined">verified</span>
-                  <h3>Why this helps</h3>
-                </div>
-                <p class="card-content">
-                  It's important for web apps to let users navigate through all
-                  interactive components using a keyboard. If users can't access
-                  these components, they won't be able to use the app. Keyboard
-                  navigation is especially critical for people with disabilities
-                  such as blindness, low vision, or hand tremors who rely on it
-                  to access these elements.
-                </p>
-              </div>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://blog.hubspot.com/marketing/image-alt-text"
-                      target="_blank"
-                      >Image Alt Text: What It Is and how to write it</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
-                      target="_blank"
-                      >Intro to accessible content – Guide Dogs Australia</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Links -->
-          <section class="article-section" id="article-navigation">
-            <h3>Links and link text</h3>
-            <p class="summary">
-              Descriptive link text improves navigation and comprehension for
-              all users.
-            </p>
-            <div class="button-container">
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
-                  target="_blank"
-                  >Info and Relationships (Level A)</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
-            </div>
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-              <p>
-                Check each link to see if it has an accessible name that
-                describes its purpose.
-              </p>
-              <ol>
-                <li>
-                  If a link leads to a document or web page, the name is of the
-                  page is sufficient.
-                </li>
-                <li>
-                  For hyperlinks, it is essential to use unique text for each
-                  link that leads to a different destination.
-                </li>
-                <li>
-                  Use the same link text for all the links that lead to the same
-                  destination.
-                </li>
-                <li>
-                  Links that open new tabs should show an external icon and
-                  announce that it will open a new window. I haven't gone into
-                  <a href="">ARIA</a> in this page, but we use ARIA to let
-                  screen reader users know the link will open a new window like
-                  this.
-                  <code
-                    >aria-label="visit sa11y.com (opens in a new window)"</code
-                  >
-                </li>
-                <img
-                  class="responsive-image"
-                  src="assets/linkexample.png"
-                  alt=""
-                />
-              </ol>
-              <div class="card">
-                <div class="card-header">
-                  <span class="material-symbols-outlined">verified</span>
-                  <h3>Why this helps</h3>
-                </div>
-                <p class="card-content">
-                  It is important for users to understand the purpose of a link
-                  before deciding whether to follow it. When the text of the
-                  link is unclear, sighted users can use the context around it
-                  to get an idea of what it means. Similarly, assistive
-                  technologies can help non-sighted users by providing them with
-                  the link's related context.
-                </p>
-              </div>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://blog.hubspot.com/marketing/image-alt-text"
-                      target="_blank"
-                      >Image Alt Text: What It Is and how to write it</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
-                      target="_blank"
-                      >Intro to accessible content – Guide Dogs Australia</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </section>
-
-          <!-- Form labels -->
-          <section class="article-section" id="article-navigation">
-            <h3>Form labels</h3>
-            <p class="summary">
-              Every input field is accompanied by a clear label that describes
-              its purpose.
-            </p>
-            <div class="button-container">
-              <p class="link">
-                <a
-                  rel="noopener"
-                  href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
-                  target="_blank"
-                  >Info and Relationships (Level A)</a
-                >
-                <span class="material-icons">north_east</span>
-              </p>
-              <button class="expand-btn" onclick="toggleContent(this)">
-                View details
-                <span class="material-icons">expand_more</span>
-              </button>
-            </div>
-            <div class="additional-content" style="display: none">
-              <!-- Additional content goes here -->
-              <ol>
-                <li>
-                  Ensure labels are positioned close to their inputs for clear
-                  visual cues.
-
-                  <img
-                    src="assets/scan.png"
-                    alt="Screenshot of how to open developer tools"
-                    class="responsive-image"
-                  />
-                </li>
-                <li>
-                  Check that inputs do not rely solely on placeholder text for
-                  labelling, as placeholders are not a substitute for labels and
-                  can pose accessibility issues.
-
-                  <img
-                    src="assets/scan.png"
-                    alt="Screenshot of how to open developer tools"
-                    class="responsive-image"
-                  />
-                </li>
-
-                <li>
-                  When an input field is focused, ensure the label does not
-                  obscure the input or disappear, which can disorient users.
-
-                  <img
-                    src="assets/scan.png"
-                    alt="Screenshot of how to open developer tools"
-                    class="responsive-image"
-                  />
-                </li>
-              </ol>
-
-              <div class="card">
-                <div class="card-header">
-                  <span class="material-symbols-outlined">verified</span>
-                  <h3>Why this helps</h3>
-                </div>
-                <p class="card-content">
-                  Clear form labels are vital for all users to fill out forms
-                  correctly. Labels give sighted users a visual cue connecting
-                  text to input fields. For those with assistive technology,
-                  labels provide necessary context for each input. This ensures
-                  all users can interact with forms effectively, reducing
-                  errors. Clear labels are also essential for speech recognition
-                  software users to control form elements with voice commands.
-                </p>
-              </div>
-
-              <h3>Helpful resources</h3>
-              <ul>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://blog.hubspot.com/marketing/image-alt-text"
-                      target="_blank"
-                      >Image Alt Text: What It Is and how to write it</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-                <li>
-                  <p class="link">
-                    <a
-                      rel="noopener"
-                      href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
-                      target="_blank"
-                      >Intro to accessible content – Guide Dogs Australia</a
-                    >
-                    <span class="material-icons">north_east</span>
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </section>
-        </div>
-
-        <div class="articleGrid">
-          <div class="contentWrapperSection disclaimer">
-            <p>
-              This page does not guarantee your website is accessible. However,
-              addressing the issues found will improve the user experience for
-              everyone.
-            </p>
-            <p>
-              Our recommendations leverage WCAG best practices, industry
-              experience, academic research, and data insights.
-            </p>
-          </div>
-        </div>
+          </aside>
+          <div class="content-divider"></div>
+          <span class="terms-text"
+            >This page does not guarantee your website will be accessible.
+            However, addressing the issues found will improve the user
+            experience for everyone. The above recommendations leverage WCAG
+            best practices, industry experience, academic research, and data
+            insights.</span
+          >
+        </article>
+        <aside class="aside-toc">
+          <nav>
+            <h2>Sections</h2>
+            <a href="#section1" class="current">Getting started</a>
+            <a href="#alt-text">Alt text</a>
+            <a href="#headings-and-structure">Headings and structure</a>
+            <a href="#colour-contrast">Colour contrast</a>
+            <a href="#navigation">Navigation</a>
+            <a href="#links">Links and link text</a>
+            <a href="#form-labels">Form labels</a>
+            <a href="#headings-and-structure">Headings and structure</a>
+            <a href="interactive-elements">Interactive elements</a>
+            <a href="responsive-content">Responsive content</a>
+            <a href="animations">Animations</a>
+            <a href="videos">Videos</a>
+          </nav>
+        </aside>
       </div>
     </main>
-
-    <div class="footerSection" id="navbar">
-      <footer class="footerGrid">
-        <div class="button-container">
-          <button class="top-btn" onclick="scrollToTop()">
-            Back to top
-            <span class="material-symbols-outlined"> arrow_upward </span>
-          </button>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="logo-container">
+          <p class="mini-logo">sa11y</p>
+          <span class="terms-text">Copyright © 2024</span>
         </div>
-      </footer>
-    </div>
+        <a href="#" class="icon-left">
+          <span class="material-icons">mail</span>
+          Email
+        </a>
+        <a href="#" class="icon-left">
+          <span class="material-icons">face</span>
+          GitHub
+        </a>
+      </div>
+    </footer>
   </body>
   <script src="scripts.js"></script>
 </html>

@@ -1,0 +1,1014 @@
+<div class="section bg-alt">
+  <div class="articleGrid">
+    <!-- summary -->
+
+    <div class="contentWrapperSection">
+      <h2>Getting started</h2>
+      <div class="card summaryContainer">
+        <img alt="" class="summaryImageWrapper" src="assets/wave.svg" />
+        <p>
+          Make your way down the page, reviewing each step. By the end, you
+          should have completed a thorough accessibility review. Please don't
+          hesitate to reach out if you encounter any issues or find anything
+          unclear.
+        </p>
+      </div>
+    </div>
+
+    <!-- getting started -->
+    <section class="article-section" id="article-navigation">
+      <h3>Setting up</h3>
+      <p>
+        Before you start looking for accessibility issues, let's get set up with
+        some tools.
+      </p>
+
+      <div class="button-container">
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+        <div class="buttonWrapper">
+          <button
+            id="openVideoBtn"
+            class="secondary-btn"
+            aria-label="Watch video demo"
+            style="margin-left: 0"
+          >
+            Watch video demo
+            <span class="material-icons">play_arrow</span>
+          </button>
+        </div>
+
+        <div id="videoContainer" class="video-container video-hidden">
+          <iframe
+            src="https://www.loom.com/embed/de8a056f45d84c018566bb7e0bc1cb2b"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            title="Video title or description"
+            class="responsive-iframe"
+          ></iframe>
+        </div>
+        <span class="divider"></span>
+
+        <p>
+          To get started, this page is separated into two parts: automated
+          testing and manual testing.
+        </p>
+        <p>
+          This is because some things are easier to check with a tool or
+          extension. They save time and are more efficient when checking certain
+          things. However, these tools can't cover everything and sometimes can
+          miss critical issues, so we complement it with manual checks.
+        </p>
+        <p>
+          Before we get started, we need to download a tool to run our automated
+          tests. We will utilise aXe by Deque University. It's free and runs on
+          your web browser. Go ahead and download it.
+        </p>
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+            target="_blank"
+            >Download aXe extentsion</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <p>
+          Here are the steps to access and run the tool after installing it:
+        </p>
+
+        <ol>
+          <li>
+            <p>
+              First, open up your developer tools by using the
+              <strong>(CMD + SHIFT + i)</strong> for mac or
+              <strong>(WINDOWS + SHIFT + i)</strong> for windows. This will
+              display all the code used to generate the web page. You can also
+              <strong>(RIGHT-CLICK)</strong> anywhere on the screen and select
+              <strong>"Inspect"</strong>.
+            </p>
+            <img
+              src="assets/inspect.png"
+              alt="Screenshot of how to open developer tools"
+              class="responsive-image"
+            />
+          </li>
+          <li>
+            <p>
+              Next, click on the little submenu located in the top right corner
+              of the page and select the aXe tool from the list.
+            </p>
+            <img
+              src="assets/run-tool.png"
+              alt="Screenshot of how to open developer tools"
+              class="responsive-image"
+            />
+          </li>
+          <li>
+            <p>
+              Click on the "Scan page" button and wait for it to complete the
+              scan. Any issues detected will be displayed at the bottom of the
+              page.
+            </p>
+            <img
+              src="assets/scan.png"
+              alt="Screenshot of how to open developer tools"
+              class="responsive-image"
+            />
+          </li>
+        </ol>
+        <p>
+          Although it may appear overwhelming if lots of issues appear, we will
+          go through key issues to look out for below.
+        </p>
+
+        <p>
+          Now you know how to run the aXe extension let's continue to the
+          Automated testing.
+        </p>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://chromewebstore.google.com/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd"
+                target="_blank"
+                >Download aXe extentsion</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</div>
+<div class="section bg-alt">
+  <div class="articleGrid">
+    <!-- Automated reviews -->
+    <div class="contentWrapperSection">
+      <h2>Automated review</h2>
+      <p>
+        We'll be using the aXe extension for the checks below. Don't worry; we
+        won't be messing with any code - we'll just be opening up developer
+        tools.
+      </p>
+    </div>
+
+    <!-- Alt text-->
+    <section class="article-section" id="article-navigation">
+      <h3>Alt text for images</h3>
+      <p class="summary">
+        Images must be identified as meaningful or decorative.
+      </p>
+      <div class="button-container">
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html"
+            target="_blank"
+            >Non-text Content (Level A)</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+
+        <ol>
+          <li>Run the aXe accessibility tool.</li>
+          <li>
+            Check the following:
+            <ul>
+              <li>
+                Images that convey information unavailable through other content
+                should have an alt tag.
+                <ul>
+                  <li>
+                    Meaningful:
+                    <code>Alt="What gets read goes here"</code>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Images that provide no information, such as illustrations, must
+                be coded as decorative.
+                <ul>
+                  <li>Decorative: <code>Alt=""</code></li>
+                </ul>
+              </li>
+              <li>
+                The rule of thumb used to determine whether an image is
+                informative is to remove it from the screen: if I am missing
+                information because the image is gone, then it means the image
+                is informative and needs alt text.
+              </li>
+              <li>
+                Check any images with alt text are descriptive and relevant.
+                This requires some manual intervention, but we want to ensure
+                alt text is accurate.
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <img
+          src="assets/CathyFreeman_5.jpeg"
+          alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing her iconic green and gold body suit and white cap, dominating the track event with fierce competition in the backdrop."
+          class="responsive-image"
+        />
+
+        <p>
+          Let's use the above image to see and example of Bad and Good alt text;
+        </p>
+        <ul>
+          <li><strong>Bad Alt text:</strong> "A group of marathon runners."</li>
+          <li>
+            <strong>Good Alt text:</strong> "Cathy Freeman in action at the 2000
+            Sydney Olympics, wearing her iconic green and gold body suit and
+            white cap, dominating the track event with fierce competition in the
+            backdrop."
+          </li>
+        </ul>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="material-symbols-outlined">verified</span>
+            <h3>Why this helps</h3>
+          </div>
+          <p class="card-content">
+            It can be difficult for individuals who are visually impaired to
+            interpret images. Correct markup and good text alternatives make
+            them accessible to everyone. Actual text is better than images of
+            text because it can be adjusted for legibility.
+          </p>
+        </div>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://blog.hubspot.com/marketing/image-alt-text"
+                target="_blank"
+                >Image Alt Text: What It Is and how to write it</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                target="_blank"
+                >Intro to accessible content – Guide Dogs Australia</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://www.stylemanual.gov.au/content-types/images/alt-text-captions-and-titles-images"
+                target="_blank"
+                >Australian Goverment – Style manual</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Headings and structure -->
+    <section class="article-section" id="article-navigation">
+      <h3>Headings and structure</h3>
+      <p class="summary">
+        Headings should form a hierarchy and ensure heading levels aren't
+        skipped.
+      </p>
+      <div class="button-container">
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+            target="_blank"
+            >Info and Relationships (Level A)</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+        <ol>
+          <li>Run the aXe accessibility tool.</li>
+          <li>
+            Check if any Heading issues appear:
+            <ul>
+              <li>Headings should follow order (h1, h2, h3, etc).</li>
+              <li>
+                Headings should follow how you would read the page's content.
+              </li>
+              <li>Headings shouldn't skip levels (h1 to h3, for example).</li>
+              <li>
+                Headings of the same level should have the same font style
+                (look).
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="material-symbols-outlined">verified</span>
+            <h3>Why this helps</h3>
+          </div>
+          <p class="card-content">
+            Heading levels help convey the relative importance of headings on a
+            webpage. People with good eyesight can distinguish the importance of
+            a heading by its visual appearance, with higher-level headings
+            generally having greater visual prominence than lower-level ones.
+            <br />
+            On the other hand, users of assistive technology rely on
+            programmatic cues to perceive heading levels.
+          </p>
+        </div>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://blog.hubspot.com/marketing/image-alt-text"
+                target="_blank"
+                >Image Alt Text: What It Is and how to write it</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                target="_blank"
+                >Intro to accessible content – Guide Dogs Australia</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Colour contrast -->
+    <section class="article-section" id="article-navigation">
+      <h3>Colour contrast</h3>
+      <p class="summary">
+        Text should have sufficient contrast against the background to ensure
+        readability.
+      </p>
+      <div class="button-container">
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+            target="_blank"
+            >Info and Relationships (Level A)</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+        <ol>
+          <li>Run the aXe accessibility tool.</li>
+          <li>
+            Check if any colour contrast issues appear:
+            <ul>
+              <li>
+                Ensure elements are in their default state (not disabled or
+                selected, without mouseover or input focus).
+              </li>
+              <li>
+                No minimum contrast ratio is required if a component is in an
+                inactive/disabled state.
+              </li>
+            </ul>
+          </li>
+        </ol>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="material-symbols-outlined">verified</span>
+            <h3>Why this helps</h3>
+          </div>
+          <p class="card-content">
+            The readability of your content is greatly influenced by its
+            contrast. It is essential for users with low vision or colour
+            blindness. A good colour contrast will make your content accessible
+            to everyone, regardless of the device or lighting in their
+            surroundings.
+          </p>
+        </div>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://blog.hubspot.com/marketing/image-alt-text"
+                target="_blank"
+                >Image Alt Text: What It Is and how to write it</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                target="_blank"
+                >Intro to accessible content – Guide Dogs Australia</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="articleGrid">
+    <!-- Manual review -->
+    <div class="contentWrapperSection">
+      <h2>Manual review</h2>
+      <p>
+        The following checks are best done manually; some require you to use a
+        keyboard and visually identify interactive elements.
+      </p>
+    </div>
+
+    <!-- Navigation -->
+    <section class="article-section" id="article-navigation">
+      <h3>Navigation</h3>
+      <p class="summary">Navigate through your site with just a keyboard.</p>
+      <div class="button-container">
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+            target="_blank"
+            >Info and Relationships (Level A)</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+        <p>
+          This page has four points to review. We will go through them one by
+          one for this demonstration. As you become more comfortable, you can
+          review them all at once.
+        </p>
+        <ol>
+          <li>
+            <strong>Keyboard navigation:</strong>
+            <ul>
+              Check that all interactive elements (buttons, links, or anything
+              that can be interacted with) can be reached using the tab and
+              arrow keys. Can you navigate through the whole page with just the
+              keyboard?
+            </ul>
+          </li>
+          <li>
+            <strong>Focus indicators:</strong>
+            <ul>
+              Make sure all interactive elements have a visual indicator when in
+              focus. This is typically a border or colour change when tabbed
+              through. See image below for example.
+            </ul>
+          </li>
+          <img
+            src="assets/focus example.svg"
+            alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing her iconic green and gold body suit and white cap, dominating the track event with fierce competition in the backdrop."
+            class="responsive-image"
+          />
+          <li>
+            <strong>Tab order:</strong>
+            <ul>
+              As you tab through your page, check the order is consistent with
+              the visual, logical order. Does the order in which you tabbed
+              follow a similar order in how you would read the content on the
+              page?
+            </ul>
+          </li>
+          <img
+            src="assets/tab-order.png"
+            alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing her iconic green and gold body suit and white cap, dominating the track event with fierce competition in the backdrop."
+            class="responsive-image"
+          />
+          <li>
+            <strong>Keyboard traps:</strong>
+            <ul>
+              Keyboard traps are when you tab into an element with no way out.
+              Commonly found with Date pickers and modals that take over the
+              focus. Just double-check that you can tab through the whole page
+              without getting trapped.
+            </ul>
+          </li>
+        </ol>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="material-symbols-outlined">verified</span>
+            <h3>Why this helps</h3>
+          </div>
+          <p class="card-content">
+            It's important for web apps to let users navigate through all
+            interactive components using a keyboard. If users can't access these
+            components, they won't be able to use the app. Keyboard navigation
+            is especially critical for people with disabilities such as
+            blindness, low vision, or hand tremors who rely on it to access
+            these elements.
+          </p>
+        </div>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://blog.hubspot.com/marketing/image-alt-text"
+                target="_blank"
+                >Image Alt Text: What It Is and how to write it</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                target="_blank"
+                >Intro to accessible content – Guide Dogs Australia</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Links -->
+    <section class="article-section" id="article-navigation">
+      <h3>Links and link text</h3>
+      <p class="summary">
+        Descriptive link text improves navigation and comprehension for all
+        users.
+      </p>
+      <div class="button-container">
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+            target="_blank"
+            >Info and Relationships (Level A)</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+        <p>
+          Check each link to see if it has an accessible name that describes its
+          purpose.
+        </p>
+        <ol>
+          <li>
+            If a link leads to a document or web page, the name is of the page
+            is sufficient.
+          </li>
+          <li>
+            For hyperlinks, it is essential to use unique text for each link
+            that leads to a different destination.
+          </li>
+          <li>
+            Use the same link text for all the links that lead to the same
+            destination.
+          </li>
+          <li>
+            Links that open new tabs should show an external icon and announce
+            that it will open a new window. I haven't gone into
+            <a href="">ARIA</a> in this page, but we use ARIA to let screen
+            reader users know the link will open a new window like this.
+            <code>aria-label="visit sa11y.com (opens in a new window)"</code>
+          </li>
+          <img class="responsive-image" src="assets/linkexample.png" alt="" />
+        </ol>
+        <div class="card">
+          <div class="card-header">
+            <span class="material-symbols-outlined">verified</span>
+            <h3>Why this helps</h3>
+          </div>
+          <p class="card-content">
+            It is important for users to understand the purpose of a link before
+            deciding whether to follow it. When the text of the link is unclear,
+            sighted users can use the context around it to get an idea of what
+            it means. Similarly, assistive technologies can help non-sighted
+            users by providing them with the link's related context.
+          </p>
+        </div>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://blog.hubspot.com/marketing/image-alt-text"
+                target="_blank"
+                >Image Alt Text: What It Is and how to write it</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                target="_blank"
+                >Intro to accessible content – Guide Dogs Australia</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Form labels -->
+    <section class="article-section" id="article-navigation">
+      <h3>Form labels</h3>
+      <p class="summary">
+        Every input field is accompanied by a clear label that describes its
+        purpose.
+      </p>
+      <div class="button-container">
+        <p class="link">
+          <a
+            rel="noopener"
+            href="https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html"
+            target="_blank"
+            >Info and Relationships (Level A)</a
+          >
+          <span class="material-icons">north_east</span>
+        </p>
+        <button class="expand-btn" onclick="toggleContent(this)">
+          View details
+          <span class="material-icons">expand_more</span>
+        </button>
+      </div>
+      <div class="additional-content" style="display: none">
+        <!-- Additional content goes here -->
+        <ol>
+          <li>
+            Ensure labels are positioned close to their inputs for clear visual
+            cues.
+
+            <img
+              src="assets/scan.png"
+              alt="Screenshot of how to open developer tools"
+              class="responsive-image"
+            />
+          </li>
+          <li>
+            Check that inputs do not rely solely on placeholder text for
+            labelling, as placeholders are not a substitute for labels and can
+            pose accessibility issues.
+
+            <img
+              src="assets/scan.png"
+              alt="Screenshot of how to open developer tools"
+              class="responsive-image"
+            />
+          </li>
+
+          <li>
+            When an input field is focused, ensure the label does not obscure
+            the input or disappear, which can disorient users.
+
+            <img
+              src="assets/scan.png"
+              alt="Screenshot of how to open developer tools"
+              class="responsive-image"
+            />
+          </li>
+        </ol>
+
+        <div class="card">
+          <div class="card-header">
+            <span class="material-symbols-outlined">verified</span>
+            <h3>Why this helps</h3>
+          </div>
+          <p class="card-content">
+            Clear form labels are vital for all users to fill out forms
+            correctly. Labels give sighted users a visual cue connecting text to
+            input fields. For those with assistive technology, labels provide
+            necessary context for each input. This ensures all users can
+            interact with forms effectively, reducing errors. Clear labels are
+            also essential for speech recognition software users to control form
+            elements with voice commands.
+          </p>
+        </div>
+
+        <h3>Helpful resources</h3>
+        <ul>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://blog.hubspot.com/marketing/image-alt-text"
+                target="_blank"
+                >Image Alt Text: What It Is and how to write it</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+          <li>
+            <p class="link">
+              <a
+                rel="noopener"
+                href="https://learn.guidedogs.com.au/courses/intro-to-accessible-content"
+                target="_blank"
+                >Intro to accessible content – Guide Dogs Australia</a
+              >
+              <span class="material-icons">north_east</span>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </div>
+
+  <div class="articleGrid">
+    <div class="contentWrapperSection disclaimer">
+      <p>
+        This page does not guarantee your website is accessible. However,
+        addressing the issues found will improve the user experience for
+        everyone.
+      </p>
+      <p>
+        Our recommendations leverage WCAG best practices, industry experience,
+        academic research, and data insights.
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+////////// css 
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  transition: border-bottom 0.4s;
+  background-color: #eaddff;
+}
+
+nav a {
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 10px;
+  font-weight: 500;
+}
+
+code {
+  font-family: "Consolas", "Monaco", "Courier New", monospace; /* Use a monospaced font */
+  background-color: #ffd8e4; /* Light grey background */
+  color: #412980; /* Dark grey text */
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 18px; /* Optional: Slightly smaller font size for inline code */
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+
+.link a {
+  background-color: transparent;
+  border: none;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #412980;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.1578em;
+  padding-left: 0px;
+  padding-right: 0px;
+  line-height: 160%;
+}
+
+.link.material-icons {
+  font-size: 18px;
+  color: #412980;
+  text-decoration: none;
+}
+
+.link a:hover {
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 0.1578em;
+  font-weight: 400;
+}
+
+.link a:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 2px #412980; /* Example: custom focus style */
+}
+
+.linkWrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  text-align: right;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 600;
+}
+
+ol {
+  font-size: var(--f-body);
+}
+
+ol > li > ul {
+  list-style-type: disc;
+  font-weight: normal;
+  font-size: var(--font-size-body);
+}
+li {
+  margin-bottom: 8px;
+}
+
+.divider {
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+}
+
+.video-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+  margin: 20px auto;
+  border-radius: 8px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
+    0px 0px 0px 1px rgba(6, 44, 82, 0.1);
+}
+
+.video-visible {
+  display: block;
+}
+
+.video-hidden {
+  display: none;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ==========================================================================
+   Additional Content Styles
+   ========================================================================== */
+
+.additional-content {
+  border-top: 1px solid #d9d9d9;
+  margin-top: 20px;
+  padding-top: 20px;
+  color: #412980;
+}
+
+.additional-content li {
+  margin-bottom: 16px;
+  line-height: 160%;
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+}
+
+.additional-content ol {
+  counter-reset: item;
+  list-style-type: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.additional-content ol > li {
+  list-style: none;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.additional-content ol > li::before {
+  content: counter(item) ". ";
+  counter-increment: item;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.additional-content ul {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+.additional-content ul ul {
+  list-style-type: circle;
+}
+
+.responsive-image {
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
+    0px 0px 0px 1px rgba(6, 44, 82, 0.1);
+}
+
+.hero {
+  background-image: linear-gradient(180deg, #eaddff, #fafafa);
+  min-height: 70vh;
+  position: relative;
+  width: 100%;
+}
+
+
+
+/* new css section  */
+/* /// */
+
+
+.background {
+  
+}
