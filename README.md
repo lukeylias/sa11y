@@ -14,3 +14,5 @@ TO-DO
     section links
     better image examples
     content review
+    back to top button
+    theme changer

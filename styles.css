@@ -397,19 +397,30 @@ nav .container {
   border-color: var(--on-success-container);
 }
 
-.button-success {
-  color: #ffffff;
-  background-color: #032c0d;
-  border: none;
-  padding: 8px 16px;
-  min-height: 44px;
-  border-radius: 4px;
+.theme-toggle {
   display: flex;
   align-items: center;
-  gap: 8px;
-  cursor: pointer;
-  justify-content: center;
-  font-family: "GT Maru";
+  gap: 8px; /* Space between icon and text */
+  padding: 4px 12px; /* Padding around the text and icon */
+  border: none; /* Removes default border */
+  background-color: #f0f0f0; /* Light background color */
+  color: #333; /* Text color */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  font-family: inherit; /* Ensures font consistency with the site */
+  border-radius: 4px; /* Optional: rounds the corners */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  flex-grow: 0; /* Prevents the button from growing */
+  flex-shrink: 0;
+  width: auto;
+  max-height: 20px;
+}
+
+.theme-toggle:hover {
+  background-color: #e0e0e0; /* Slightly darker on hover */
+}
+
+.theme-toggle .material-icons {
+  font-size: 20px; /* Adjust based on your design */
 }
 
 .icon-wrapper {
