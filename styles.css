@@ -159,7 +159,7 @@ h5 {
 }
 
 h1 {
-  font-size: 180px;
+  font-size: 80px;
   font-family: "GTMaruMegaMini", sans-serif;
   color: var(--on-primary-container);
 }
@@ -254,12 +254,12 @@ code {
   position: relative;
   display: inline;
   font-family: var(--font-family-mono);
-  font-size: 0.9em;
+  font-size: 1.3em;
   letter-spacing: -0.5px;
   line-height: 160%;
   padding: 4.5px 6px;
   margin: 1px -1px;
-  background-color: #c9eafe; /* Light grey background */
+  background-color: var(--primary-container); /* Light grey background */
   color: var(--on-surface);
   /* background: rgba(115, 125, 140, 0.17); */
   border-radius: 3px;
@@ -290,10 +290,14 @@ header {
   background-color: var(--surface);
 }
 
+.alt-style {
+  color: var(--primary);
+}
+
 .hero {
   position: relative;
   width: 100%;
-  height: 60vh; /* 100vh makes the hero section fill the screen height */
+  min-height: 60vh; /* Change from fixed height to minimum height */
   background-color: var(--surface-container);
   display: flex;
   flex-direction: column;
@@ -301,6 +305,12 @@ header {
   align-items: center;
   text-align: center;
   padding: 15px;
+  overflow: hidden; /* Hide overflow, but consider adjusting content or container size */
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
 }
 
 .italic {
@@ -367,6 +377,11 @@ header {
   gap: 10px;
 }
 
+.container .aside-toc,
+.container article {
+  padding-top: 80px; /* Adjust the padding value as needed */
+}
+
 nav .container {
   padding: 8px 32px;
 }
@@ -380,9 +395,6 @@ nav .container {
   border-left: 3px solid;
   border-radius: 4px;
   transition: background 350ms ease 0s;
-}
-
-.callout-content {
   font-size: var(--font-size-400);
 }
 
@@ -392,9 +404,54 @@ nav .container {
   color: var(--on-primary-container);
 }
 
-.callout-success {
-  background-color: var(--success-container);
-  border-color: var(--on-success-container);
+.card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--surface);
+}
+
+.card-image {
+  width: 150px;
+  object-fit: cover;
+  height: 100%;
+  padding: 20px;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.card-button {
+  margin-top: 12px;
+  align-self: start;
+  padding: 10px 20px;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  justify-content: center;
+}
+
+.card-button:hover {
+  background-color: #0056b3; /* Darker shade of blue when hovering */
+}
+
+.external-link {
+  text-decoration: none;
+  height: 44px;
+  gap: 16px;
+  align-items: center;
+  transition: background-color 0.2s ease-out;
+  cursor: pointer;
 }
 
 .theme-toggle {
@@ -479,28 +536,6 @@ nav .container {
   border-radius: 8px; /* Optional: if you want the image itself to have rounded corners */
 }
 
-.video-container {
-  position: relative;
-  padding: 24px 32px;
-  background: hsl(225deg, 25%, 95%);
-  border-radius: 16px;
-  margin-top: 48px;
-  margin-bottom: 64px;
-}
-
-.video-outer {
-  position: relative;
-  padding-top: 56.25%;
-}
-
-.video-inner {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
 .logo-container {
   display: flex;
   flex-direction: column;
@@ -521,12 +556,18 @@ nav .container {
 
 /* Styles for medium devices */
 @media (min-width: 768px) {
+  .hero h1 {
+    font-size: 80px; /* Smallest size */
+  }
 }
 
 /* Styles for large devices */
 @media (min-width: 1040px) {
   .aside-toc {
     display: block;
+  }
+  .hero h1 {
+    font-size: 120px; /* Further increase for medium devices */
   }
 }
 
@@ -535,5 +576,8 @@ nav .container {
   .callout {
     margin-left: -35px;
     margin-right: -35px;
+  }
+  .hero h1 {
+    font-size: 180px; /* Maximum size for extra large devices */
   }
 }

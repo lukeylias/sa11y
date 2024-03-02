@@ -40,21 +40,11 @@
             <!-- Assuming sa11y is your logo text; you can also use an image if you have a logo graphic -->
             <p class="mini-logo">sa11y</p>
           </div>
-          <button class="theme-toggle icon-left">
-            <span class="material-icons">brightness_4</span>
-            <!-- Example icon for theme toggle -->
-            Language
-          </button>
-          <button class="theme-toggle icon-left">
-            <span class="material-icons">brightness_4</span>
-            <!-- Example icon for theme toggle -->
-            Toggle Theme
-          </button>
         </div>
       </nav>
       <div class="hero">
         <img src="assets/logo-large.svg" alt="" />
-        <h1>sa11y</h1>
+        <h1>sa<span class="alt-style">11</span>y</h1>
         <p class="summary">
           Sa11y is a helpful tool that provides easy-to-follow steps for
           <strong class="italic">beginners</strong> to review a website for
@@ -94,6 +84,10 @@
           </aside>
           <div class="content-divider"></div>
           <h2 id="alt-text">Alt text</h2>
+          <a class="external-link" href="">
+            Non-text Content (Level A)
+            <i class="material-icons"> open_in_new </i>
+          </a>
           <p>
             Ensuring images have descriptive text, also known as alt text, is
             crucial for web accessibility.
@@ -187,7 +181,9 @@
           <h3>Additional resources</h3>
           <ul>
             <li>
-              <a href="">link example</a>
+              <a class="external-link" href=""
+                >link example <i class="material-icons"> open_in_new </i></a
+              >
             </li>
             <li>
               <a href="">link example</a>
@@ -251,6 +247,25 @@
               >
             </div>
           </aside>
+          <div class="card callout">
+            <!-- <img
+              src="assets\wave.svg"
+              alt="Image Description"
+              class="card-image"
+            /> -->
+            <div class="card-content">
+              <strong>Have Feedback or Questions?</strong>
+              <div>
+                <span class="callout-content"
+                  >If you have any feedback, questions, or encounter barriers,
+                  please don't hesitate to reach out. Your input is invaluable
+                  in helping make sa11y a resource that is helpful, open and
+                  welcoming to everyone.</span
+                >
+              </div>
+              <a class="card-button">Email</a>
+            </div>
+          </div>
           <div class="content-divider"></div>
           <span class="terms-text"
             >This page does not guarantee your website will be accessible.
