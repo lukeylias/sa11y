@@ -169,9 +169,9 @@ h2 {
   margin-bottom: 32px;
 }
 
-h2:first-child {
+/* h2:first-child {
   margin-top: 0;
-}
+} */
 
 h3 {
   font-size: var(--font-size-600);
@@ -294,6 +294,15 @@ header {
   color: var(--primary);
 }
 
+.caption {
+  font-size: 14px;
+  padding-right: 12px;
+  padding-left: 24px;
+  margin-top: 0;
+  border-left: 1px solid;
+  border-color: #6d6d6d;
+}
+
 .hero {
   position: relative;
   width: 100%;
@@ -407,10 +416,9 @@ nav .container {
 .card {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
-  border-radius: 8px;
   overflow: hidden;
-  background-color: var(--surface);
+  background-color: var(--on-primary);
+  padding: 24px 32px;
 }
 
 .card-image {
@@ -421,7 +429,6 @@ nav .container {
 }
 
 .card-content {
-  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -547,7 +554,8 @@ nav .container {
   height: 1px; /* Height of the border */
   background-color: var(--primary); /* Color of the border */
   width: 100%; /* Full width */
-  margin: 20px 0; /* Spacing above and below the border */
+  margin-bottom: 20px;
+  margin-top: 96px;
 }
 
 /* Styles for small devices */
