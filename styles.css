@@ -96,25 +96,25 @@ html {
   letter-spacing: -0.16px;
 }
 
-body.dark-theme {
-  /* Surface */
+/* body.dark-theme {
+
   --surface: #141218;
   --on-surface: #e6e0e9;
   --surface-container: #2b2930;
 
-  /* Primary */
+
   --primary: #d0bcff;
   --on-primary: #381e72;
   --primary-container: #4f378b;
   --on-primary-container-dark: #eaddff;
 
-  /* Error */
+
   --error: #f2b8b5;
   --on-error: #601410;
   --error-container: #8c1d18;
   --on-error-container-dark: #f9dedc;
-  /* Define your dark theme colors here */
-}
+
+} */
 
 main {
   position: relative;
@@ -239,6 +239,7 @@ nav a {
   text-decoration: none;
   border-left: 2px solid var(--on-surface);
   padding: 0.5rem 1rem;
+  width: 100%;
 }
 
 nav a:hover {
@@ -253,15 +254,15 @@ nav a:hover {
 code {
   position: relative;
   display: inline;
-  font-family: var(--font-family-mono);
-  font-size: 1.3em;
-  letter-spacing: -0.5px;
-  line-height: 160%;
+  /* font-family: var(--font-family-mono); */
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 200%;
   padding: 4.5px 6px;
   margin: 1px -1px;
-  background-color: var(--primary-container); /* Light grey background */
+  background-color: var(--primary-container);
   color: var(--on-surface);
-  /* background: rgba(115, 125, 140, 0.17); */
+  background: rgba(115, 125, 140, 0.17);
   border-radius: 3px;
   -webkit-box-decoration-break: clone;
 }
@@ -269,14 +270,16 @@ code {
 kbd {
   position: relative;
   display: inline;
-  font-size: 0.9em;
-  letter-spacing: -0.5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 200%;
   padding: 4.5px 6px;
   margin: 1px -1px;
-  /* background-color: #eaddff;  */
-  background-color: #c9eafe; /* Light grey background */
+  background-color: var(--primary-container);
   color: var(--on-surface);
+  background: rgba(115, 125, 140, 0.17);
   border-radius: 3px;
+  -webkit-box-decoration-break: clone;
 }
 
 strong {

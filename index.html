@@ -43,11 +43,11 @@
         </div>
       </nav>
       <div class="hero">
-        <img src="assets/logo-large.svg" alt="" />
+        <img src="assets/SEO 1.svg" alt="" />
         <h1>sa<span class="alt-style">11</span>y</h1>
         <p class="summary">
-          Sa11y is a helpful tool that provides easy-to-follow steps for
-          <strong class="italic">beginners</strong> to review a website for
+          Sa11y is a helpful resource that provides easy-to-follow steps for
+          <strong class="italic">beginners</strong> to review websites for
           accessibility issues.
         </p>
       </div>
@@ -55,7 +55,41 @@
     <main>
       <div class="container">
         <article class="article-flex">
-          <section id="intro"><h2>Introduction</h2></section>
+          <section id="intro">
+            <h2>Introduction</h2>
+            <p>
+              Web accessibility refers to the ability of people with
+              disabilities, such as visual, auditory, physical, speech or
+              cognitive, to access and interact with web content. It ensures
+              equal access to information and services, enabling everyone to
+              participate fully in the digital world.
+            </p>
+            <p>
+              To achieve web accessibility, the Web Content Accessibility
+              Guidelines (WCAG) provide a set of instructions for building
+              websites that everyone can use, including people with
+              disabilities. These guidelines are created and maintained by
+              experts in the industry and individuals with lived experience.
+            </p>
+            <p>
+              The WCAG is based on four main principles, namely, perceivable,
+              operable, understandable, and robust, each of which is further
+              divided into 13 guidelines associated with testable success
+              criteria. The success criteria are divided into three levels of
+              conformance, known as levels A, AA, and AAA.
+            </p>
+            <p>
+              If you're feeling overwhelmed, don't worry. sa11y is a resource
+              that simplifies some of the guidance from WCAG while gradually
+              introducing you to concepts.
+            </p>
+            <p>
+              Make your way down the page, reviewing each step. By the end, you
+              should have completed a thorough accessibility review. Please
+              don't hesitate to reach out if you encounter any issues or find
+              anything unclear.
+            </p>
+          </section>
 
           <section id="getting-started">
             <h2>Getting started</h2>
@@ -83,7 +117,7 @@
               the browser).
             </p>
             <aside class="responsive-image">
-              <img src="assets/inspect.png" alt="" />
+              <img src="assets/focus-order.svg" alt="" />
             </aside>
           </section>
           <div class="content-divider"></div>
@@ -227,7 +261,7 @@
               organization.
             </p>
             <h3>How to review</h3>
-            <strong>Automated check:</strong>
+            <strong>Automated review:</strong>
             <ol>
               <li>Run the aXe extension.</li>
               <li>
@@ -235,7 +269,7 @@
                 <strong>headings or heading order.</strong>
               </li>
             </ol>
-            <strong>Manual check:</strong>
+            <strong>Manual review:</strong>
             <ol>
               <li>
                 <strong>Right-click</strong> on a heading to reveal a preview
@@ -253,7 +287,7 @@
               </li>
             </ul>
             <aside class="responsive-image">
-              <img src="assets/example-test.svg" alt="" />
+              <img src="assets/interactive-elements.svg" alt="" />
             </aside>
             <p class="caption">
               Users should be able to interact with any interactive element on
@@ -275,22 +309,82 @@
               </div>
             </aside>
           </section>
+          <div class="content-divider"></div>
+          <section id="colours">
+            <h2>Colours</h2>
+            <p>
+              Colour contrast refers to the difference in brightness between two
+              colours. Sufficient color contrast is essential for ensuring the
+              readability of text and other visual elements on your website.
+              Users with low vision or colour blindness may struggle to read
+              text with poor colour contrast, making it crucial to verify that
+              your website meets the recommended contrast ratios.
+            </p>
+            <h3>How to review</h3>
+            <strong>Automated review:</strong>
+            <ol>
+              <li>Run the aXe extension.</li>
+              <li>
+                Check for any issues refering to
+                <strong>colour contrast</strong>.
+              </li>
+            </ol>
+            <p>
+              <strong>Alternatively: </strong>You can use a tool like
+              <a href=""> WebAIM's Contrast Checker </a> to ensure text and
+              background colors meet accessibility standards. Simply grab the
+              two hex values you want to check and enter them in.
+            </p>
 
-          <h3 id="colours">Colours</h3>
-          <h3 id="navigation">Navigation</h3>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                Ensure headings follow a logical hierarchy (H1, H2, H3, etc.).
+              </li>
+              <li>
+                Headings should not skip levels (e.g., H1 to H3). Headings of
+                the same level should look similar.
+              </li>
+            </ul>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >Heading levels help convey the relative importance of
+                  headings on a webpage. People with good eyesight can
+                  distinguish the importance of a heading by its visual
+                  appearance, with higher-level headings generally having
+                  greater visual prominence than lower-level ones.</span
+                >
+              </div>
+            </aside>
+          </section>
+          <div class="content-divider"></div>
+          <section id="navigation"><h2>Navigation</h2></section>
+          <!-- 
+          <div class="content-divider"></div>
           <h3 id="links">links</h3>
+          <div class="content-divider"></div>
           <h3 id="forms">Forms</h3>
+          <div class="content-divider"></div>
           <h3 id="interactive-elements">Interactive elements</h3>
+          <div class="content-divider"></div>
           <h3 id="responsive-content">Responsive content</h3>
+          <div class="content-divider"></div>
           <h3 id="animations">Animations</h3>
+          <div class="content-divider"></div>
           <h3 id="videos">Videos</h3>
+          <div class="content-divider"></div> -->
           <h3>What's next?</h3>
           <p>
             Hopefully now you have a broad idea of some things you can check.
             But there's still plenty more to learn.
           </p>
 
-          <div class="card">
+          <!-- <div class="card">
             <div class="card-content">
               <strong>Have Feedback or Questions?</strong>
               <div>
@@ -303,7 +397,7 @@
               </div>
               <a class="card-button">Email</a>
             </div>
-          </div>
+          </div> -->
           <div class="content-divider"></div>
           <span class="terms-text"
             >This page does not guarantee your website will be accessible.
@@ -316,8 +410,8 @@
         <aside class="aside-toc">
           <nav>
             <h2>Sections</h2>
-            <a href="#intro">Introduction</a>
-            <a href="#getting-started" class="current">Getting started</a>
+            <a href="#intro" class="current">Introduction</a>
+            <a href="#getting-started">Getting started</a>
             <a href="#images">Images</a>
             <a href="#headings-and-structure">Headings and structure</a>
             <a href="#colours">Colours</a>
