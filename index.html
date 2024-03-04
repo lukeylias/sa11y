@@ -55,204 +55,242 @@
     <main>
       <div class="container">
         <article class="article-flex">
-          <h2>Setting up</h2>
-          <p>
-            Before we get started, we need to download a tool to run our
-            automated tests. We will utilise aXe by Deque University. It's free
-            and runs on your web browser. Go ahead and download it.
-          </p>
-          <a href="www.google.com">Download aXe extension</a>
-          <p>
-            After you have installed it, let's run-through how to use it. First,
-            we need access to the developer tools.
-          </p>
-          <p>
-            <strong>Keyboard Shortcut: </strong>Open the Developer Tools by
-            pressing:
-          </p>
-          <ul>
-            <li><strong>Mac: </strong><kbd>CMD + SHIFT + i</kbd></li>
-            <li><strong>Windows : </strong><kbd>CTRL + SHIFT + i</kbd></li>
-          </ul>
-          <p>
-            <strong>Alternatively: </strong>Right-click anywhere on the webpage
-            and select "Inspect" or "Inspect Element" (depending on the
-            browser).
-          </p>
-          <aside class="responsive-image">
-            <img src="assets/inspect.png" alt="" />
-          </aside>
-          <div class="content-divider"></div>
-          <h2 id="alt-text">Alt text</h2>
-          <a class="external-link" href="">
-            Non-text Content (Level A)
-            <i class="material-icons"> open_in_new </i>
-          </a>
-          <p>
-            Ensuring images have descriptive text, also known as alt text, is
-            crucial for web accessibility.
-          </p>
-          <p>
-            Alt text provides a textual alternative to the content of an image,
-            allowing users who are blind or visually impaired to understand the
-            image's meaning using screen readers or other assistive
-            technologies. It also helps with SEO and improves the overall
-            accessibility of your website for all users.
-          </p>
-          <h3>How to check:</h3>
-          <strong>Automated check:</strong>
-          <ol>
-            <li>Run the aXe extension.</li>
-            <li>Check for any issues refering to <strong>Alt text</strong></li>
-          </ol>
+          <section id="intro"><h2>Introduction</h2></section>
 
-          <strong>Manual check:</strong>
-          <ol>
-            <li>
-              <strong>Right-click</strong> on the image you want to check,
-              select <strong>inspect</strong> or
-              <strong>inspect element</strong> (depending on the browser)
-            </li>
-            <li>
-              While hovering over the image with your cursor, you will get a
-              preview which will show wether or not the image has alt text.
-            </li>
-          </ol>
-          <aside class="responsive-image">
-            <img src="assets/image-preview.png" alt="" />
-          </aside>
-          <h3>Best practices</h3>
-          <ul>
-            <li>
-              Images that convey information unavailable through other content
-              should have an alt tag. <br /><strong>Meaningful: </strong
-              ><code>Alt="What gets read goes here"</code>
-            </li>
-            <li>
-              Images that provide no information, such as illustrations, must be
-              coded as decorative. <br /><strong>Decorative: </strong
-              ><code>Alt=""</code>
-            </li>
-            <li>
-              The rule of thumb used to determine whether an image is
-              informative is to remove it from the screen: if I am missing
-              information because the image is gone, then it means the image is
-              informative and needs alt text.
-            </li>
-            <li>
-              Check any images with alt text are descriptive and relevant. This
-              requires some manual intervention, but we want to ensure alt text
-              is accurate.
-            </li>
-          </ul>
-          <p>Let's run through an example below.</p>
-          <aside class="responsive-image">
-            <img src="assets/CathyFreeman_5.jpeg" alt="" />
-          </aside>
-          <strong>Good alt text: </strong>
-          <p>
-            <code>
-              alt="Cathy Freeman in action at the 2000 Sydney Olympics, wearing
-              her iconic green and gold body suit and white cap, dominating the
-              track event with fierce competition in the backdrop."</code
-            >
-          </p>
-          <strong>Poor alt text: </strong>
-          <p><code>alt="A group of marathon runners."</code></p>
-          <strong>Bad alt text: </strong>
-          <p><code>alt="image2343.jpeg"</code></p>
-          <p class="italic">
-            Avoid at all cost using the image name as alt text.
-          </p>
-          <aside class="callout callout-information">
-            <div class="icon-wrapper">
-              <i class="material-icons">favorite</i>
-            </div>
-            <strong>Why this helps</strong>
-            <div>
-              <span class="callout-content"
-                >It can be difficult for individuals who are visually impaired
-                to interpret images. Correct markup and good text alternatives
-                make them accessible to everyone. Actual text is better than
-                images of text because it can be adjusted for legibility.</span
-              >
-            </div>
-          </aside>
-          <h3>Additional resources</h3>
-          <ul>
-            <li>
-              <a class="external-link" href=""
-                >link example <i class="material-icons"> open_in_new </i></a
-              >
-            </li>
-            <li>
-              <a href="">link example</a>
-            </li>
-          </ul>
+          <section id="getting-started">
+            <h2>Getting started</h2>
+            <p>
+              Before we get started, we need to download a tool to run our
+              automated tests. We will utilise aXe by Deque University. It's
+              free and runs on your web browser. Go ahead and download it.
+            </p>
+            <a href="www.google.com">Download aXe extension</a>
+            <p>
+              After you have installed it, let's run-through how to use it.
+              First, we need access to the developer tools.
+            </p>
+            <p>
+              <strong>Keyboard Shortcut: </strong>Open the Developer Tools by
+              pressing:
+            </p>
+            <ul>
+              <li><strong>Mac: </strong><kbd>CMD + SHIFT + i</kbd></li>
+              <li><strong>Windows : </strong><kbd>CTRL + SHIFT + i</kbd></li>
+            </ul>
+            <p>
+              <strong>Alternatively: </strong>Right-click anywhere on the
+              webpage and select "Inspect" or "Inspect Element" (depending on
+              the browser).
+            </p>
+            <aside class="responsive-image">
+              <img src="assets/inspect.png" alt="" />
+            </aside>
+          </section>
           <div class="content-divider"></div>
-          <h2 id="headings-and-structure">Headings and structure</h2>
-          <p>
-            Headings structure your web page content, organizing it into a
-            hierarchy and making it easier for users to navigate and understand.
-          </p>
-          <p>
-            They also play a crucial role in SEO. Ensuring headings follow a
-            logical structure, with proper nesting (H1, H2, H3, etc.), is
-            essential for accessibility.
-          </p>
-          <p>
-            Users who rely on assistive technologies, such as screen readers,
-            navigate web pages primarily using headings. A logical heading
-            structure allows them to efficiently grasp the page's content and
-            organization.
-          </p>
-          <h3>How to review</h3>
-          <strong>Automated check:</strong>
-          <ol>
-            <li>Run the aXe extension.</li>
-            <li>
-              Check for any issues refering to
-              <strong>headings or heading order.</strong>
-            </li>
-          </ol>
-          <strong>Manual check:</strong>
-          <ol>
-            <li>
-              <strong>Right-click</strong> on a heading to reveal a preview
-              panel to identiy heading styles.
-            </li>
-          </ol>
-          <h3>Best practices</h3>
-          <ul>
-            <li>
-              Ensure headings follow a logical hierarchy (H1, H2, H3, etc.).
-            </li>
-            <li>
-              Headings should not skip levels (e.g., H1 to H3). Headings of the
-              same level should look similar.
-            </li>
-          </ul>
-          <aside class="callout callout-information">
-            <div class="icon-wrapper">
-              <i class="material-icons">favorite</i>
-            </div>
-            <strong>Why this helps</strong>
-            <div>
-              <span class="callout-content"
-                >Heading levels help convey the relative importance of headings
-                on a webpage. People with good eyesight can distinguish the
-                importance of a heading by its visual appearance, with
-                higher-level headings generally having greater visual prominence
-                than lower-level ones.</span
+          <section id="images">
+            <h2>Images</h2>
+            <a class="external-link" href="">
+              Non-text Content (Level A)
+              <i class="material-icons"> open_in_new </i>
+            </a>
+            <p>
+              Ensuring images have descriptive text, also known as alt text, is
+              crucial for web accessibility.
+            </p>
+            <p>
+              Alt text provides a textual alternative to the content of an
+              image, allowing users who are blind or visually impaired to
+              understand the image's meaning using screen readers or other
+              assistive technologies. It also helps with SEO and improves the
+              overall accessibility of your website for all users.
+            </p>
+            <h3>How to check:</h3>
+            <strong>Automated check:</strong>
+            <ol>
+              <li>Run the aXe extension.</li>
+              <li>
+                Check for any issues refering to <strong>Alt text</strong>
+              </li>
+            </ol>
+            <strong>Manual check:</strong>
+            <ol>
+              <li>
+                <strong>Right-click</strong> on the image you want to check,
+                select <strong>inspect</strong> or
+                <strong>inspect element</strong> (depending on the browser)
+              </li>
+              <li>
+                While hovering over the image with your cursor, you will get a
+                preview which will show wether or not the image has alt text.
+              </li>
+            </ol>
+            <aside class="responsive-image">
+              <img src="assets/image-preview.png" alt="" />
+            </aside>
+            <p class="caption">
+              Element preview displays when you hover over an element with your
+              mouse, while the developer tools are open.
+            </p>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                Images that convey information unavailable through other content
+                should have an alt tag. <br /><strong>Meaningful: </strong
+                ><code>Alt="What gets read goes here"</code>
+              </li>
+              <li>
+                Images that provide no information, such as illustrations, must
+                be coded as decorative. <br /><strong>Decorative: </strong
+                ><code>Alt=""</code>
+              </li>
+              <li>
+                The rule of thumb used to determine whether an image is
+                informative is to remove it from the screen: if I am missing
+                information because the image is gone, then it means the image
+                is informative and needs alt text.
+              </li>
+              <li>
+                Check any images with alt text are descriptive and relevant.
+                This requires some manual intervention, but we want to ensure
+                alt text is accurate.
+              </li>
+            </ul>
+            <p>Let's run through an example below.</p>
+            <aside class="responsive-image">
+              <img src="assets/CathyFreeman_5.jpeg" alt="" />
+            </aside>
+            <p class="caption">
+              Cathy Freeman in action at the 2000 Sydney Olympics, wearing her
+              iconic green and gold body suit and white cap, dominating the
+              track event with fierce competition in the backdrop.
+            </p>
+            <strong>Good alt text: </strong>
+            <p>
+              <code>
+                alt="Cathy Freeman in action at the 2000 Sydney Olympics,
+                wearing her iconic green and gold body suit and white cap,
+                dominating the track event with fierce competition in the
+                backdrop."</code
               >
-            </div>
-          </aside>
-          <div class="card callout">
-            <!-- <img
-              src="assets\wave.svg"
-              alt="Image Description"
-              class="card-image"
-            /> -->
+            </p>
+            <strong>Poor alt text: </strong>
+            <p><code>alt="A group of marathon runners."</code></p>
+            <strong>Bad alt text: </strong>
+            <p><code>alt="image2343.jpeg"</code></p>
+            <p class="italic">
+              Avoid at all cost using the image name as alt text.
+            </p>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >It can be difficult for individuals who are visually impaired
+                  to interpret images. Correct markup and good text alternatives
+                  make them accessible to everyone. Actual text is better than
+                  images of text because it can be adjusted for
+                  legibility.</span
+                >
+              </div>
+            </aside>
+            <h3>Additional resources</h3>
+            <ul>
+              <li>
+                <a class="external-link" href=""
+                  >link example <i class="material-icons"> open_in_new </i></a
+                >
+              </li>
+              <li>
+                <a href="">link example</a>
+              </li>
+            </ul>
+          </section>
+          <div class="content-divider"></div>
+          <section id="headings-and-structure">
+            <h2>Headings and structure</h2>
+            <p>
+              Headings structure your web page content, organizing it into a
+              hierarchy and making it easier for users to navigate and
+              understand.
+            </p>
+            <p>
+              They also play a crucial role in SEO. Ensuring headings follow a
+              logical structure, with proper nesting (H1, H2, H3, etc.), is
+              essential for accessibility.
+            </p>
+            <p>
+              Users who rely on assistive technologies, such as screen readers,
+              navigate web pages primarily using headings. A logical heading
+              structure allows them to efficiently grasp the page's content and
+              organization.
+            </p>
+            <h3>How to review</h3>
+            <strong>Automated check:</strong>
+            <ol>
+              <li>Run the aXe extension.</li>
+              <li>
+                Check for any issues refering to
+                <strong>headings or heading order.</strong>
+              </li>
+            </ol>
+            <strong>Manual check:</strong>
+            <ol>
+              <li>
+                <strong>Right-click</strong> on a heading to reveal a preview
+                panel to identiy heading styles.
+              </li>
+            </ol>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                Ensure headings follow a logical hierarchy (H1, H2, H3, etc.).
+              </li>
+              <li>
+                Headings should not skip levels (e.g., H1 to H3). Headings of
+                the same level should look similar.
+              </li>
+            </ul>
+            <aside class="responsive-image">
+              <img src="assets/example-test.svg" alt="" />
+            </aside>
+            <p class="caption">
+              Users should be able to interact with any interactive element on
+              your page. Especially with a keyboard.
+            </p>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >Heading levels help convey the relative importance of
+                  headings on a webpage. People with good eyesight can
+                  distinguish the importance of a heading by its visual
+                  appearance, with higher-level headings generally having
+                  greater visual prominence than lower-level ones.</span
+                >
+              </div>
+            </aside>
+          </section>
+
+          <h3 id="colours">Colours</h3>
+          <h3 id="navigation">Navigation</h3>
+          <h3 id="links">links</h3>
+          <h3 id="forms">Forms</h3>
+          <h3 id="interactive-elements">Interactive elements</h3>
+          <h3 id="responsive-content">Responsive content</h3>
+          <h3 id="animations">Animations</h3>
+          <h3 id="videos">Videos</h3>
+          <h3>What's next?</h3>
+          <p>
+            Hopefully now you have a broad idea of some things you can check.
+            But there's still plenty more to learn.
+          </p>
+
+          <div class="card">
             <div class="card-content">
               <strong>Have Feedback or Questions?</strong>
               <div>
@@ -278,18 +316,18 @@
         <aside class="aside-toc">
           <nav>
             <h2>Sections</h2>
-            <a href="#section1" class="current">Getting started</a>
-            <a href="#alt-text">Alt text</a>
+            <a href="#intro">Introduction</a>
+            <a href="#getting-started" class="current">Getting started</a>
+            <a href="#images">Images</a>
             <a href="#headings-and-structure">Headings and structure</a>
-            <a href="#colour-contrast">Colour contrast</a>
+            <a href="#colours">Colours</a>
             <a href="#navigation">Navigation</a>
             <a href="#links">Links and link text</a>
-            <a href="#form-labels">Form labels</a>
-            <a href="#headings-and-structure">Headings and structure</a>
-            <a href="interactive-elements">Interactive elements</a>
-            <a href="responsive-content">Responsive content</a>
-            <a href="animations">Animations</a>
-            <a href="videos">Videos</a>
+            <a href="#forms">Form labels</a>
+            <a href="#interactive-elements">Interactive elements</a>
+            <a href="#responsive-content">Responsive content</a>
+            <a href="#animations">Animations</a>
+            <a href="#videos">Videos</a>
           </nav>
         </aside>
       </div>
