@@ -297,14 +297,72 @@ header {
   color: var(--primary);
 }
 
-.caption {
+.responsive-image {
+  /* Existing styles */
+  margin: 0 auto;
+  margin-top: 32px;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
+    0px 0px 0px 1px rgba(6, 44, 82, 0.1);
+
+  /* Limit the width of the container if necessary, or use max-width */
+  width: 100%; /* This makes the container responsive */
+  max-width: 68.75rem;
+}
+
+.responsive-image img {
+  width: 100%; /* Causes the image to fill its container */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 8px; /* Optional: if you want the image itself to have rounded corners */
+}
+
+.caption-header {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and title */
+  color: var(--on-surface);
+  padding: 8px; /* Padding inside the header */
+  border-radius: 2px 2px 16px 16px;
+  margin-top: 8px;
+}
+
+.caption-header.do .caption-icon {
+  color: var(--on-success-container); /* Green color for 'Do' */
+}
+
+.caption-header.do {
+  background-color: var(--success-container);
+}
+
+.caption-header.dont .caption-icon {
+  color: var(--on-error-container); /* Dark red color for 'Don't' icon */
+}
+
+.caption-header.dont {
+  background-color: var(--error-container);
+}
+
+.caption-title {
+  font-weight: bold; /* If you want the title to be bold */
+}
+
+.caption-text {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+/* .caption {
   font-size: 14px;
   padding-right: 12px;
   padding-left: 24px;
   margin-top: 0;
   border-left: 1px solid;
   border-color: #6d6d6d;
-}
+} */
 
 .hero {
   position: relative;
@@ -316,8 +374,9 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 15px;
-  overflow: hidden; /* Hide overflow, but consider adjusting content or container size */
+  padding: 16px;
+  overflow: hidden;
+  padding: 80px;
 }
 
 .hero img {
@@ -522,28 +581,6 @@ nav .container {
   font-family: "GTMaruMegaMini", sans-serif;
   font-size: var(--font-size-600);
   color: var(--on-primary-container);
-}
-
-.responsive-image {
-  /* Existing styles */
-  margin: 0 auto;
-  margin-bottom: 32px;
-  margin-top: 32px;
-  display: block;
-  border-radius: 8px;
-  position: relative;
-  box-shadow: 0px 2px 16px 0px rgba(33, 43, 54, 0.08),
-    0px 0px 0px 1px rgba(6, 44, 82, 0.1);
-
-  /* Limit the width of the container if necessary, or use max-width */
-  width: 100%; /* This makes the container responsive */
-  max-width: 68.75rem;
-}
-
-.responsive-image img {
-  width: 100%; /* Causes the image to fill its container */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Optional: if you want the image itself to have rounded corners */
 }
 
 .logo-container {

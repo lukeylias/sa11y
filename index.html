@@ -287,12 +287,19 @@
               </li>
             </ul>
             <aside class="responsive-image">
-              <img src="assets/interactive-elements.svg" alt="" />
+              <img src="assets/heading-levels.svg" alt="" />
             </aside>
-            <p class="caption">
-              Users should be able to interact with any interactive element on
-              your page. Especially with a keyboard.
-            </p>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Use alt text to convey what the image is showing in an
+                informative, short phrase. Alt text example: A DJ standing in
+                front of music equipment at night.
+              </div>
+            </div>
             <aside class="callout callout-information">
               <div class="icon-wrapper">
                 <i class="material-icons">favorite</i>
@@ -363,10 +370,189 @@
             </aside>
           </section>
           <div class="content-divider"></div>
-          <section id="navigation"><h2>Navigation</h2></section>
-          <!-- 
+          <section id="navigation">
+            <h2>Navigation</h2>
+            <p>
+              Keyboard navigation allows users to interact with web elements
+              using the keyboard instead of a mouse. This is essential for users
+              with motor impairments or who use screen readers, as they rely
+              solely on the keyboard to navigate and interact with websites.
+            </p>
+            <p>
+              Testing keyboard navigation ensures that all interactive elements,
+              such as <strong>buttons</strong>, <strong>links</strong>, and
+              <strong>forms</strong>, can be accessed and operated using the
+              keyboard.
+            </p>
+            <h3>How to review</h3>
+            <strong>Manual review:</strong>
+            <ol>
+              <li>
+                Using your keyboard, check that all interactive elements
+                (buttons, links, or anything that can be interacted with) can be
+                reached using the <kbd>tab</kbd> and <kbd>arrow</kbd> keys. Can
+                you navigate through the whole page with just the keyboard?
+              </li>
+            </ol>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                All interactive elements must have a visual indicator when in
+                focus. This is typically a border or colour change when tabbed
+                through.
+              </li>
+              <li>
+                The order in which you tab through the elements should be
+                consistent with how you read or navigate the page.
+              </li>
+              <li>
+                Ensure you can visibly see where the focus is; you shouldn't be
+                able to focus on an element hidden or out of view.
+              </li>
+            </ul>
+            <aside class="responsive-image">
+              <img src="assets/external-link.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Use alt text to convey what the image is showing in an
+                informative, short phrase. Alt text example: A DJ standing in
+                front of music equipment at night.
+              </div>
+            </div>
+            <aside class="responsive-image">
+              <img src="assets/external-link.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Use alt text to convey what the image is showing in an
+                informative, short phrase. Alt text example: A DJ standing in
+                front of music equipment at night.
+              </div>
+            </div>
+
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >Web apps must let users navigate through all interactive
+                  components using a keyboard. If users can't access these
+                  components, they won't be able to use the app. Keyboard
+                  navigation is especially critical for people with blindness,
+                  low vision, or hand tremors who rely on it to access these
+                  elements.</span
+                >
+              </div>
+            </aside>
+          </section>
           <div class="content-divider"></div>
-          <h3 id="links">links</h3>
+          <section id="links">
+            <h2>links</h2>
+            <p>
+              On the web, links enable users to navigate from one webpage to
+              another. However, for users with disabilities or impairments,
+              accessing website links may pose a challenge if they are not clear
+              and descriptive.
+            </p>
+            <p>
+              Therefore, it is essential to ensure that links are visible and
+              have meaningful and descriptive text that accurately conveys the
+              information that the user will access by clicking on the link.
+              This approach not only enhances web accessibility but also
+              improves the overall user experience.
+            </p>
+            <h3>How to review</h3>
+            <strong>Manual review:</strong>
+            <ol>
+              <li>
+                Look for underlined text or icons that typically indicate links.
+                Hovering over the text or icon might also change the cursor to a
+                hand symbol, further suggesting a link.
+              </li>
+              <li>
+                Inspect a webpage link by right-clicking and select "Inspect"
+                (or "Inspect Element"). Locate the element and check for an
+                <code>a</code> tag with an href attribute that specifies the
+                link's URL.
+              </li>
+            </ol>
+            <p>
+              <strong>Alternatively: </strong>If your on a mac and are feeling
+              confident, you can use the voiceOver rotor menu to quickly show a
+              list of all links.
+            </p>
+            <ul>
+              <li>
+                Press <kbd>Control + Option + U</kbd> to activate the Rotor
+                Menu.
+              </li>
+              <li>
+                Alternatively, you can customize this key combination by going
+                to
+                <strong
+                  >System Preferences > Accessibility > VoiceOver >
+                  Rotor</strong
+                >.
+              </li>
+            </ul>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                Review each link to ensure its text clearly describes where the
+                link goes.
+              </li>
+              <li>
+                Use unique text for unique links and consistent text for links
+                to the same destination.
+              </li>
+              <li>
+                Indicate links that open in new tabs with an external icon and
+                announcement.
+              </li>
+            </ul>
+            <aside class="responsive-image">
+              <img src="assets/external-link.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Use alt text to convey what the image is showing in an
+                informative, short phrase. Alt text example: A DJ standing in
+                front of music equipment at night.
+              </div>
+            </div>
+            <aside class="responsive-image">
+              <img src="assets/external-link.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header dont">
+                <span class="material-icons caption-icon">cancel</span>
+                <span class="caption-title">Don't</span>
+              </div>
+              <div class="caption-text">
+                Use alt text to convey what the image is showing in an
+                informative, short phrase. Alt text example: A DJ standing in
+                front of music equipment at night.
+              </div>
+            </div>
+          </section>
+
+          <!-- 
+
           <div class="content-divider"></div>
           <h3 id="forms">Forms</h3>
           <div class="content-divider"></div>
