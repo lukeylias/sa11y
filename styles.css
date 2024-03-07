@@ -293,8 +293,30 @@ header {
   background-color: var(--surface);
 }
 
+.stylised {
+  font-style: italic;
+  font-size: 24px;
+  color: #2c0b8e;
+}
+
 .alt-style {
   color: var(--primary);
+}
+
+.skip {
+  margin-left: 16px;
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip:focus {
+  position: static;
+  width: auto;
+  height: auto;
 }
 
 .responsive-image {
@@ -320,7 +342,7 @@ header {
   align-items: center;
   gap: 8px; /* Space between icon and title */
   color: var(--on-surface);
-  padding: 8px; /* Padding inside the header */
+  padding: 8px 16px;
   border-radius: 2px 2px 16px 16px;
   margin-top: 8px;
 }
@@ -433,6 +455,15 @@ header {
   margin-top: 40px;
   width: 100%;
   gap: 10px;
+}
+
+/* Targeting the .container specifically within .site-footer */
+.site-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* Remove gap if it's not supported in your flexbox layout */
 }
 
 .site-header {
@@ -595,6 +626,29 @@ nav .container {
   margin-top: 96px;
 }
 
+#myBtn {
+  display: none; /* Initial state might be hidden until a certain action occurs */
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: var(--primary);
+  color: white;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
 /* Styles for small devices */
 @media (min-width: 490px) {
 }
@@ -603,6 +657,27 @@ nav .container {
 @media (min-width: 768px) {
   .hero h1 {
     font-size: 80px; /* Smallest size */
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* Remove justify-content as it's not needed with flex-direction: column */
+  }
+
+  /* If you have specific styles for children of .container that need adjusting */
+  .site-footer .logo-container,
+  .site-footer .icon-left {
+    width: 100%; /* Make each item take full width */
+    margin-bottom: 16px; /* Add space between stacked items */
+    /* Ensure last item doesn't add extra space at the bottom */
+  }
+
+  .site-footer .icon-left:last-child {
+    margin-bottom: 0;
   }
 }
 

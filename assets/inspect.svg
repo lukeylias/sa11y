@@ -1,7 +1,8 @@
 <svg width="1920" height="1143" viewBox="0 0 1920 1143" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <rect width="1920" height="1143" fill="#D9E7FE"/>
 <rect x="191" y="8" width="1538" height="1126" fill="url(#pattern0)"/>
-<rect x="705.205" y="884.205" width="518.591" height="61.5909" rx="9.61364" stroke="#FF6060" stroke-width="6.40909"/>
+<rect x="705.205" y="884.205" width="518.591" height="61.5909" rx="9.61364" fill="#2AB6A0" fill-opacity="0.15"/>
+<rect x="705.205" y="884.205" width="518.591" height="61.5909" rx="9.61364" stroke="#2AB6A0" stroke-width="6.40909"/>
 <g filter="url(#filter0_d_188_22542)">
 <path d="M1063 981.128C1063.76 982.952 1063.03 989.86 1059 991.462C1054.97 993.063 1049.82 991.462 1049.82 991.462L1040.48 972.777L1024.34 988.923V916L1073.8 965.462H1055.37C1056.27 967.196 1062.04 978.811 1063 981.128Z" fill="white"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1028.67 926.461V978.461L1041.67 965.461L1052.5 987.128C1052.5 987.128 1055.43 988.063 1056.83 987.128C1058.24 986.192 1059.63 984.309 1059 982.794C1056.02 975.642 1048.17 961.128 1048.17 961.128H1063.33L1028.67 926.461Z" fill="black"/>

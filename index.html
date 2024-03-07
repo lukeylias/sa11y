@@ -4,12 +4,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Sa11y - Simple Accessibility Guidance for Beginners</title>
+    <title>sa11y - Simple Accessibility Guidance for Beginners</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Sa11y is a tool that provides easy-to-follow accessibility guidance with step-by-step instructions tailored for beginners to effectively tackle accessibility issues."
+      content="sa11y is a tool that provides easy-to-follow accessibility guidance with step-by-step instructions tailored for beginners to effectively tackle accessibility issues."
     />
 
     <link rel="stylesheet" href="styles.css" />
@@ -34,6 +34,7 @@
   </head>
   <body>
     <header>
+      <a href="#main" class="skip">Skip to main content</a>
       <nav class="site-header">
         <div class="container">
           <div class="logo-container">
@@ -52,7 +53,7 @@
         </p>
       </div>
     </header>
-    <main>
+    <main id="main">
       <div class="container">
         <article class="article-flex">
           <section id="intro">
@@ -65,19 +66,27 @@
               participate fully in the digital world.
             </p>
             <p>
-              To achieve web accessibility, the Web Content Accessibility
-              Guidelines (WCAG) provide a set of instructions for building
-              websites that everyone can use, including people with
-              disabilities. These guidelines are created and maintained by
-              experts in the industry and individuals with lived experience.
+              To achieve web accessibility, the
+              <a href=""> Web Content Accessibility Guidelines (WCAG) </a>
+              provide a set of instructions for building websites that everyone
+              can use, including people with disabilities. These guidelines are
+              created and maintained by experts in the industry and individuals
+              with lived experience.
             </p>
             <p>
-              The WCAG is based on four main principles, namely, perceivable,
-              operable, understandable, and robust, each of which is further
-              divided into 13 guidelines associated with testable success
-              criteria. The success criteria are divided into three levels of
-              conformance, known as levels A, AA, and AAA.
+              The <strong>WCAG</strong> is based on four main principles,
+              namely, <strong>perceivable</strong>, operable, understandable,
+              and robust, each of which is further divided into 13 guidelines
+              associated with testable success criteria. The success criteria
+              are divided into three levels of conformance, known as levels A,
+              AA, and AAA.
             </p>
+            <ul>
+              <li>Perceivable</li>
+              <li>Operable</li>
+              <li>Understandable</li>
+              <li>Robust</li>
+            </ul>
             <p>
               If you're feeling overwhelmed, don't worry. sa11y is a resource
               that simplifies some of the guidance from WCAG while gradually
@@ -89,7 +98,10 @@
               don't hesitate to reach out if you encounter any issues or find
               anything unclear.
             </p>
+            <p class="stylised">Be curious, ask questions and have fun!</p>
           </section>
+
+          <div class="content-divider"></div>
 
           <section id="getting-started">
             <h2>Getting started</h2>
@@ -111,39 +123,57 @@
               <li><strong>Mac: </strong><kbd>CMD + SHIFT + i</kbd></li>
               <li><strong>Windows : </strong><kbd>CTRL + SHIFT + i</kbd></li>
             </ul>
-            <p>
-              <strong>Alternatively: </strong>Right-click anywhere on the
-              webpage and select "Inspect" or "Inspect Element" (depending on
-              the browser).
-            </p>
             <aside class="responsive-image">
               <img src="assets/inspect.svg" alt="" />
             </aside>
-            <p>
-              Next, click on the little submenu located in the top right corner
-              of the page and select the aXe tool from the list.
-            </p>
+            <div>
+              <div class="caption-text">
+                <strong>Alternatively: </strong>Right-click anywhere on the
+                webpage and select "Inspect" or "Inspect Element" (depending on
+                the browser).
+              </div>
+            </div>
+
             <aside class="responsive-image">
-              <img src="assets/inspect.svg" alt="" />
+              <img src="assets/sub-menu.svg" alt="" />
             </aside>
-            <p>
-              Click on the <strong>Scan page</strong> button and wait for it to
-              complete the scan. Any issues detected will be displayed at the
-              bottom of the page.
-            </p>
+            <div>
+              <div class="caption-text">
+                Next, click on the little <strong>submenu</strong> located in
+                the top right corner of the page and select the
+                <strong>aXe DevTools</strong> from the list.
+              </div>
+            </div>
+
             <aside class="responsive-image">
-              <img src="assets/inspect.svg" alt="" />
+              <img src="assets/axe-ui-1.svg" alt="" />
             </aside>
-            <p>
-              Although it may appear overwhelming if lots of issues appear, this
-              page will help guide you to focus on certian ones.
-            </p>
-            <p>
-              Now that you have downloaded the extension, you can review any of
-              the following points below.
-            </p>
+            <div>
+              <div class="caption-text">
+                Click on the <strong>Scan page</strong> button and wait for it
+                to complete the scan. Any issues detected will be displayed at
+                the bottom of the page.
+              </div>
+            </div>
+            <aside class="responsive-image">
+              <img src="assets/axe-ui-2.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-text">
+                Any issues found will be displayed below.
+                <ol>
+                  <li>URL that was scanned</li>
+                  <li>Total issues found overview, broken down by severity</li>
+                  <li>
+                    Individual issues that you can expand for more details
+                  </li>
+                </ol>
+              </div>
+            </div>
           </section>
+
           <div class="content-divider"></div>
+
           <section id="images">
             <h2>Images</h2>
             <a class="external-link" href="">
@@ -161,15 +191,15 @@
               assistive technologies. It also helps with SEO and improves the
               overall accessibility of your website for all users.
             </p>
-            <h3>How to check:</h3>
-            <strong>Automated check:</strong>
+            <h3>How to review:</h3>
+            <strong>Automated review:</strong>
             <ol>
               <li>Run the aXe extension.</li>
               <li>
                 Check for any issues refering to <strong>Alt text</strong>
               </li>
             </ol>
-            <strong>Manual check:</strong>
+            <strong>Manual review:</strong>
             <ol>
               <li>
                 <strong>Right-click</strong> on the image you want to check,
@@ -184,10 +214,13 @@
             <aside class="responsive-image">
               <img src="assets/element-preview.svg" alt="" />
             </aside>
-            <p class="caption">
-              Element preview displays when you hover over an element with your
-              mouse, while the developer tools are open.
-            </p>
+            <div>
+              <div class="caption-text">
+                Element preview displays when you hover over an element with
+                your mouse, while the developer tools are open.
+              </div>
+            </div>
+
             <h3>Best practices</h3>
             <ul>
               <li>
@@ -216,11 +249,14 @@
             <aside class="responsive-image">
               <img src="assets/CathyFreeman_5.jpeg" alt="" />
             </aside>
-            <p class="caption">
-              Cathy Freeman in action at the 2000 Sydney Olympics, wearing her
-              iconic green and gold body suit and white cap, dominating the
-              track event with fierce competition in the backdrop.
-            </p>
+            <div>
+              <div class="caption-text">
+                Cathy Freeman in action at the 2000 Sydney Olympics, wearing her
+                iconic green and gold body suit and white cap, dominating the
+                track event with fierce competition in the backdrop.
+              </div>
+            </div>
+
             <strong>Good alt text: </strong>
             <p>
               <code>
@@ -264,7 +300,9 @@
               </li>
             </ul>
           </section>
+
           <div class="content-divider"></div>
+
           <section id="headings-and-structure">
             <h2>Headings and structure</h2>
             <p>
@@ -339,7 +377,9 @@
               </div>
             </aside>
           </section>
+
           <div class="content-divider"></div>
+
           <section id="colours">
             <h2>Colours</h2>
             <p>
@@ -396,7 +436,9 @@
               </div>
             </aside>
           </section>
+
           <div class="content-divider"></div>
+
           <section id="navigation">
             <h2>Navigation</h2>
             <p>
@@ -480,7 +522,9 @@
               </div>
             </aside>
           </section>
+
           <div class="content-divider"></div>
+
           <section id="links">
             <h2>links</h2>
             <p>
@@ -573,8 +617,84 @@
                 clicking it will open a new window or tab.
               </div>
             </div>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >It is important for users to understand the purpose of a link
+                  before deciding whether to follow it. When the text of the
+                  link is unclear, sighted users can use the context around it
+                  to get an idea of what it means. Similarly, assistive
+                  technologies can help non-sighted users by providing them with
+                  the link's related context.</span
+                >
+              </div>
+            </aside>
+          </section>
+
+          <div class="content-divider"></div>
+
+          <section id="forms">
+            <h2>Form labels</h2>
+            <p>
+              Form labels have a significant impact on making web forms
+              accessible and user-friendly. A label placed next to each input
+              field clearly describes its purpose and guides users through the
+              form-filling process.
+            </p>
+            <p>
+              Properly labelled forms are crucial not only for usability but
+              also for web accessibility. They ensure that all users can
+              successfully complete forms regardless of how they interact with a
+              web page.
+            </p>
+            <h3>How to review</h3>
+            <strong>Manual review:</strong>
+            <ol>
+              <li>
+                Make sure every <strong>input field</strong> has a
+                <strong>label</strong> indicating the information users should
+                enter.
+              </li>
+              <li>
+                When you click on an input field to start typing or
+                <strong>focus</strong> on it, check the label doesn't disappear
+                or get covered up. You should always be able to see the label.
+              </li>
+            </ol>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                Ensure labels are positioned close to their inputs for clear
+                visual cues.
+              </li>
+              <li>
+                Inputs should not rely solely on placeholder text for labelling,
+                as placeholders are not substitutes for labels and can pose
+                accessibility issues.
+              </li>
+              <li>
+                When an input field is focused, ensure the label does not
+                obscure the input or disappear, which can disorient users.
+              </li>
+            </ul>
             <aside class="responsive-image">
-              <img src="assets/external-link.svg" alt="" />
+              <img src="assets/label-position.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Labels should always be close to their repective input.
+              </div>
+            </div>
+            <aside class="responsive-image">
+              <img src="assets/placeholder-example.svg" alt="" />
             </aside>
             <div>
               <div class="caption-header dont">
@@ -582,33 +702,299 @@
                 <span class="caption-title">Don't</span>
               </div>
               <div class="caption-text">
-                Use alt text to convey what the image is showing in an
-                informative, short phrase. Alt text example: A DJ standing in
-                front of music equipment at night.
+                Avoid using placeholder text as the label, since it will
+                dissapear when the user starts typing.
               </div>
             </div>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >Clear form labels are vital for all users to fill out forms
+                  correctly. Labels give sighted users a visual cue connecting
+                  text to input fields. For those with assistive technology,
+                  labels provide a necessary context for each input. This
+                  ensures all users can interact with forms effectively,
+                  reducing errors.</span
+                >
+              </div>
+            </aside>
           </section>
 
-          <!-- 
+          <div class="content-divider"></div>
+
+          <section id="touch-targets">
+            <h2>Touch targets</h2>
+            <p>
+              The term "touch target" refers to the specific area that a user
+              needs to tap to activate an interactive element like buttons,
+              links and custom interactive widgets.
+            </p>
+            <p>
+              It is important that touch targets are appropriately sized to
+              cater to users with mobility or vision impairments and to provide
+              an optimal experience for users on mobile devices.
+            </p>
+            <h3>How to review</h3>
+            <strong>Manual review:</strong>
+            <ol>
+              <li>
+                <strong>Right-click</strong> on the image you want to check,
+                select <strong>inspect</strong> or
+                <strong>inspect element</strong> (depending on the browser)
+              </li>
+              <li>
+                While hovering over the an element with your cursor, you will
+                get a preview which will show the dimensions of the element.
+              </li>
+              <li>
+                Ensure that the minimum size of any interactive element is at
+                least <strong>44x44 CSS pixels</strong>. This size is
+                recommended to provide a comfortable target for finger taps,
+                reducing the risk of errors and making the site more accessible
+                to users with different abilities.
+              </li>
+            </ol>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                It's important to provide sufficient spacing between touch
+                targets to prevent accidental activations.
+              </li>
+              <li>
+                For essential interactions, consider making touch targets larger
+                than the minimum size. Larger targets are easier to use and can
+                significantly enhance usability for many users.
+              </li>
+              <li>
+                While inspecting elements and checking sizes is helpful, nothing
+                beats testing your website on actual devices. This allows you to
+                experience firsthand how easy or difficult it is to interact
+                with elements on different screen sizes and resolutions.
+              </li>
+            </ul>
+            <aside class="responsive-image">
+              <img src="assets/touch-target-min.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Labels should always be close to their repective input.
+              </div>
+            </div>
+            <aside class="responsive-image">
+              <img src="assets/bad-touch-target.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header dont">
+                <span class="material-icons caption-icon">cancel</span>
+                <span class="caption-title">Don't</span>
+              </div>
+              <div class="caption-text">
+                Avoid using placeholder text as the label, since it will
+                dissapear when the user starts typing.
+              </div>
+            </div>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >Having large and well-spaced touch targets on your website
+                  can significantly decrease the chances of errors occurring.
+                  This makes it much easier for users to navigate and interact
+                  with your site, especially for those with motor impairments,
+                  large fingers, or individuals using a small screen.</span
+                >
+              </div>
+            </aside>
+          </section>
 
           <div class="content-divider"></div>
-          <h3 id="forms">Forms</h3>
-          <div class="content-divider"></div>
-          <h3 id="interactive-elements">Interactive elements</h3>
-          <div class="content-divider"></div>
-          <h3 id="responsive-content">Responsive content</h3>
-          <div class="content-divider"></div>
-          <h3 id="animations">Animations</h3>
-          <div class="content-divider"></div>
-          <h3 id="videos">Videos</h3>
-          <div class="content-divider"></div> -->
-          <h3>What's next?</h3>
-          <p>
-            Hopefully now you have a broad idea of some things you can check.
-            But there's still plenty more to learn.
-          </p>
 
-          <!-- <div class="card">
+          <section id="responsive-content">
+            <h2>Responsive content</h2>
+            <p>
+              Many users rely on zooming in to read text, view images, and
+              interact with page elements. A website that can be navigated and
+              used easily at high zoom levels, without the need for horizontal
+              scrolling, provides a better experience for these users.
+            </p>
+            <h3>How to review</h3>
+            <strong>Manual review:</strong>
+            <ol>
+              <li>
+                Open your browser settings. Look for the zoom option, which is
+                typically available in the menu or settings panel.
+              </li>
+              <li>
+                Increase the zoom level to <strong>400%</strong>. This simulates
+                what content might look like to a user who needs content to be
+                enlarged to see it more clearly.
+              </li>
+              <li>
+                At a <strong>400%</strong> zoom, check if all the page content
+                fits within the viewport and is usable without needing to scroll
+                horizontally.
+              </li>
+            </ol>
+            <strong>Exceptions to horizontal scrolling:</strong>
+            While horizontal scrolling should generally be avoided, there are
+            exceptions:
+            <ul>
+              <li>
+                Large tables that contain a lot of information may require
+                horizontal scrolling to view all the data.
+              </li>
+              <li>
+                Photos, maps, charts, and certain games that are designed to be
+                wide may also necessitate horizontal scrolling.
+              </li>
+              <li>
+                Interfaces with toolbars or panels that are an integral part of
+                the navigation or functionality.
+              </li>
+            </ul>
+            <h3>Best practices</h3>
+            <ul>
+              <li>
+                Using responsive design principles to ensure content reflows and
+                adapts to various screen sizes and zoom levels. Use flexible
+                layouts and scalable images to accommodate different viewing
+                conditions.
+              </li>
+              <li>
+                Ensure that text remains legible at high zoom levels. Avoid
+                fixed font sizes in pixels; use relative units like ems or rems
+                instead, which scale better when zoomed in.
+              </li>
+              <li>
+                Test that all navigational elements like <strong>menus</strong>,
+                <strong>links</strong>, and <strong>buttons</strong> are fully
+                accessible and operable at increased zoom levels. Users should
+                be able to access all parts of the site without difficulty.
+              </li>
+            </ul>
+            <aside class="responsive-image">
+              <img src="assets/touch-target-min.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
+              <div class="caption-text">
+                Labels should always be close to their repective input.
+              </div>
+            </div>
+            <aside class="responsive-image">
+              <img src="assets/bad-touch-target.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-header dont">
+                <span class="material-icons caption-icon">cancel</span>
+                <span class="caption-title">Don't</span>
+              </div>
+              <div class="caption-text">
+                Avoid using placeholder text as the label, since it will
+                dissapear when the user starts typing.
+              </div>
+            </div>
+            <aside class="callout callout-information">
+              <div class="icon-wrapper">
+                <i class="material-icons">favorite</i>
+              </div>
+              <strong>Why this helps</strong>
+              <div>
+                <span class="callout-content"
+                  >Having large and well-spaced touch targets on your website
+                  can significantly decrease the chances of errors occurring.
+                  This makes it much easier for users to navigate and interact
+                  with your site, especially for those with motor impairments,
+                  large fingers, or individuals using a small screen.</span
+                >
+              </div>
+            </aside>
+          </section>
+          <div class="content-divider"></div>
+          <section id="next-steps">
+            <h2>Next steps</h2>
+            <p>
+              You've reached the end of the site, and I hope it's equipped you
+              with the basic knowledge to assess your website's accessibility.
+              Remember, accessibility is an ongoing journey, not a destination.
+              Here are some resources to help you continue learning and
+              improving your website.
+            </p>
+            <h3>Deepen your understanding:</h3>
+            <ul>
+              <li>
+                <strong>Web Accessibility Initiative (WAI): </strong> Explore
+                the WAI resources, including tutorials, guidelines, and best
+                practices, to gain a comprehensive understanding of web
+                accessibility. <a href="">Web Accessibility Initiative</a>
+              </li>
+              <li>
+                <strong>WCAG 2.2: </strong> Learn about the Web Content
+                Accessibility Guidelines (WCAG) 2.2, the international standard
+                for web accessibility
+                <a href="">Web Content Accessibility Guidelines</a>
+              </li>
+            </ul>
+            <h3>Free online courses:</h3>
+            <ul>
+              <li>
+                <strong>W3C's Introduction to Web Accessibility:</strong> Gain
+                fundamental knowledge about web accessibility and its
+                importance.
+                <a href="">W3C's Introduction to Web Accessibility</a>
+              </li>
+              <li>
+                <strong>edX's Introduction to Web Accessibility:</strong> This
+                course delves deeper into WCAG principles and implementation:
+                <a href="">edX's Introduction to Web Accessibility</a>
+              </li>
+            </ul>
+            <h3>Additional resources:</h3>
+            <ul>
+              <li>
+                <strong>Intopia's Accessibility Not-Checklist:</strong> This
+                guide is well-crafted and simplifies accessibility by breaking
+                down complex concepts into simple terms. It's easy to understand
+                and really worth checking out.
+                <a href="https://not-checklist.intopia.digital/"
+                  >Intopia's Accessibility Not-Checklist</a
+                >
+              </li>
+              <li>
+                <strong>A11Y Project:</strong> Explore practical advice,
+                tutorials, and tools for web developers and designers.
+                <a href="https://www.a11yproject.com/">A11Y Project</a>
+              </li>
+              <li>
+                <strong>WebAIM:</strong> Access a wealth of information on web
+                accessibility, including WCAG compliance testing tools.
+                <a href="https://webaim.org/">WebAIM</a>
+              </li>
+            </ul>
+            <p>
+              Remember don't hesitate to seek user feedback from individuals
+              with disabilities to gain valuable insights into their experience
+              with your website. By continuously learning, implementing best
+              practices, and testing your website, you can create a more
+              inclusive and accessible web experience for everyone.
+            </p>
+          </section>
+
+          <div class="card">
             <div class="card-content">
               <strong>Have Feedback or Questions?</strong>
               <div>
@@ -621,7 +1007,7 @@
               </div>
               <a class="card-button">Email</a>
             </div>
-          </div> -->
+          </div>
           <div class="content-divider"></div>
           <span class="terms-text"
             >This page does not guarantee your website will be accessible.
@@ -642,10 +1028,9 @@
             <a href="#navigation">Navigation</a>
             <a href="#links">Links</a>
             <a href="#forms">Form labels</a>
-            <a href="#interactive-elements">Interactive elements</a>
+            <a href="#touch-targets">Touch targets</a>
             <a href="#responsive-content">Responsive content</a>
-            <a href="#animations">Animations</a>
-            <a href="#videos">Videos</a>
+            <a href="#next-steps">Next steps</a>
           </nav>
         </aside>
       </div>
@@ -666,6 +1051,9 @@
         </a>
       </div>
     </footer>
+    <button onclick="topFunction()" id="myBtn" title="Back to top">
+      Back to top
+    </button>
   </body>
   <script src="scripts.js"></script>
 </html>
