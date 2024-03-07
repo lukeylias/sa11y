@@ -91,7 +91,8 @@ html {
   padding: 0;
   display: flex;
   align-items: center;
-  font-family: "GT Maru", sans-serif;
+  font-family: "Lato", sans-serif;
+  font-size: var(--font-size-500);
   line-height: 1.65;
   letter-spacing: -0.16px;
 }
@@ -234,7 +235,7 @@ nav h2 {
 
 nav a {
   font-weight: 600;
-  font-size: 14px;
+  font-size: var(--font-size-400);
   letter-spacing: 2px;
   text-decoration: none;
   border-left: 2px solid var(--on-surface);
@@ -284,7 +285,7 @@ kbd {
 
 strong {
   color: var(--on-primary-container);
-  font-family: "GT Maru", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: bold;
 }
 
@@ -326,21 +327,20 @@ header {
   display: block;
   border-radius: 8px;
   position: relative;
-  /* Limit the width of the container if necessary, or use max-width */
-  width: 100%; /* This makes the container responsive */
+  width: 100%;
   max-width: 68.75rem;
 }
 
 .responsive-image img {
-  width: 100%; /* Causes the image to fill its container */
-  height: auto; /* Maintains aspect ratio */
-  border-radius: 8px; /* Optional: if you want the image itself to have rounded corners */
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
 .caption-header {
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between icon and title */
+  gap: 8px;
   color: var(--on-surface);
   padding: 8px 16px;
   border-radius: 2px 2px 16px 16px;
@@ -348,7 +348,7 @@ header {
 }
 
 .caption-header.do .caption-icon {
-  color: var(--on-success-container); /* Green color for 'Do' */
+  color: var(--on-success-container);
 }
 
 .caption-header.do {
@@ -371,17 +371,8 @@ header {
   margin-top: 16px;
   margin-bottom: 32px;
   padding: 0 16px;
-  font-size: 16px;
+  font-size: var(--font-size-400);
 }
-
-/* .caption {
-  font-size: 14px;
-  padding-right: 12px;
-  padding-left: 24px;
-  margin-top: 0;
-  border-left: 1px solid;
-  border-color: #6d6d6d;
-} */
 
 .hero {
   position: relative;
@@ -409,7 +400,7 @@ header {
 
 .terms-text {
   font-style: italic;
-  font-size: var(--font-size-325);
+  font-size: var(--font-size-350);
 }
 
 .container {
@@ -457,13 +448,11 @@ header {
   gap: 10px;
 }
 
-/* Targeting the .container specifically within .site-footer */
 .site-footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* Remove gap if it's not supported in your flexbox layout */
 }
 
 .site-header {
@@ -471,14 +460,13 @@ header {
   justify-content: space-between;
   align-items: center;
   background: var(--surface-container);
-  /* margin-top: 40px; */
   width: 100%;
   gap: 10px;
 }
 
 .container .aside-toc,
 .container article {
-  padding-top: 80px; /* Adjust the padding value as needed */
+  padding-top: 80px;
 }
 
 nav .container {
@@ -501,6 +489,7 @@ nav .container {
   background-color: var(--primary-container);
   border-color: var(--primary);
   color: var(--on-primary-container);
+  font-size: var(--font-size-500);
 }
 
 .card {
