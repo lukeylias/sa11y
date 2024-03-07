@@ -384,9 +384,9 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 16px;
   overflow: hidden;
   padding: 80px;
+  padding-top: 0;
 }
 
 .hero img {
