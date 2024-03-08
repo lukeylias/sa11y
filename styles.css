@@ -91,7 +91,7 @@ html {
   padding: 0;
   display: flex;
   align-items: center;
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: var(--font-size-500);
   line-height: 1.65;
   letter-spacing: -0.16px;
@@ -285,7 +285,7 @@ kbd {
 
 strong {
   color: var(--on-primary-container);
-  font-family: "Lato", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
 
