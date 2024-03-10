@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
 
@@ -47,6 +47,7 @@
           </div>
         </div>
       </nav>
+
       <div class="hero">
         <h1>sa<span class="alt-style">11</span>y</h1>
         <img src="assets/SEO 1.svg" alt="" />
@@ -71,7 +72,17 @@
             </p>
             <p>
               To achieve web accessibility, the
-              <a href=""> Web Content Accessibility Guidelines (WCAG) </a>
+              <a
+                class="external-link"
+                href="https://www.w3.org/WAI/standards-guidelines/wcag/"
+                target="_blank"
+                rel="noopener"
+                aria-label="Web Content Accessibility Guidelines (opens in new window)"
+              >
+                <span>Web Content Accessibility Guidelines (WCAG)</span
+                ><i class="material-icons">open_in_new</i>
+              </a>
+
               provide a set of instructions for building websites that everyone
               can use, including people with disabilities. These guidelines are
               created and maintained by experts in the industry and individuals
@@ -112,7 +123,17 @@
               automated tests. We will utilise aXe by Deque University. It's
               free and runs on your web browser. Go ahead and download it.
             </p>
-            <a href="www.google.com">Download aXe extension</a>
+            <a
+              class="external-link"
+              href="https://..."
+              target="_blank"
+              rel="noopener"
+              aria-label="Download aXe extension (opens in new window)"
+            >
+              <span>Download aXe extension</span
+              ><i class="material-icons">open_in_new</i>
+            </a>
+
             <p>
               After you have installed it, let's run-through how to use it.
               First, we need access to the developer tools.
@@ -178,10 +199,6 @@
 
           <section id="images">
             <h2>Images</h2>
-            <a class="external-link" href="">
-              Non-text Content (Level A)
-              <i class="material-icons"> open_in_new </i>
-            </a>
             <p>
               Ensuring images have descriptive text, also known as alt text, is
               crucial for web accessibility.
@@ -293,12 +310,28 @@
             <h3>Additional resources</h3>
             <ul>
               <li>
-                <a class="external-link" href=""
-                  >link example <i class="material-icons"> open_in_new </i></a
+                <a
+                  class="external-link"
+                  href="https://www.w3.org/TR/WCAG22/#non-text-content"
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="WCAG non-text content (opens in new window)"
                 >
+                  <span>WCAG 2.2: WCAG non-text content</span
+                  ><i class="material-icons">open_in_new</i>
+                </a>
               </li>
               <li>
-                <a href="">link example</a>
+                <a
+                  class="external-link"
+                  href="https://..."
+                  target="_blank"
+                  rel="noopener"
+                  aria-label="Download aXe extension (opens in new window)"
+                >
+                  <span>Download aXe extension</span
+                  ><i class="material-icons">open_in_new</i>
+                </a>
               </li>
             </ul>
           </section>
@@ -407,6 +440,15 @@
               background colors meet accessibility standards. Simply grab the
               two hex values you want to check and enter them in.
             </p>
+            <aside class="responsive-image">
+              <img src="assets/webAim.svg" alt="" />
+            </aside>
+            <div>
+              <div class="caption-text">
+                This contrast checker will provide the contrast ratio between
+                two colour values.
+              </div>
+            </div>
 
             <h3>Best practices</h3>
             <ul>
@@ -1021,7 +1063,7 @@
         </article>
         <aside class="aside-toc">
           <nav>
-            <h2>Sections</h2>
+            <span class="toc-title">Sections</span>
             <a href="#intro" class="current">Introduction</a>
             <a href="#getting-started">Getting started</a>
             <a href="#images">Images</a>
