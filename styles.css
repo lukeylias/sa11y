@@ -142,7 +142,6 @@ h5 {
 h1 {
   font-size: 80px;
   font-family: "GTMaruMegaMini", sans-serif;
-  color: var(--on-primary-container);
 }
 h2 {
   font-size: var(--font-size-750);
@@ -304,9 +303,8 @@ header {
 }
 
 .stylised {
-  font-style: italic;
   font-size: 24px;
-  color: #2c0b8e;
+  color: #005797;
 }
 
 .alt-style {
@@ -402,7 +400,6 @@ header {
   text-align: center;
   overflow: hidden;
   padding: 80px;
-  padding-top: 0;
 }
 
 .hero img {
@@ -577,7 +574,7 @@ nav .container {
 .mini-logo {
   font-family: "GTMaruMegaMini", sans-serif;
   font-size: var(--font-size-600);
-  color: var(--on-primary-container);
+  color: #005797;
 }
 
 .logo-container {
@@ -603,7 +600,7 @@ nav .container {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: var(--primary);
+  background-color: #005797;
   color: white;
   cursor: pointer;
   padding: 8px 16px;

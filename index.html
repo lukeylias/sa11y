@@ -39,22 +39,21 @@
   <body>
     <header>
       <a href="#main" class="skip">Skip to main content</a>
-      <nav class="site-header">
+      <!-- <nav class="site-header">
         <div class="container">
           <div class="logo-container">
-            <!-- Assuming sa11y is your logo text; you can also use an image if you have a logo graphic -->
             <p class="mini-logo">sa11y</p>
           </div>
         </div>
-      </nav>
+      </nav> -->
 
       <div class="hero">
         <h1>sa<span class="alt-style">11</span>y</h1>
-        <img src="assets/SEO 1.svg" alt="" />
+        <img src="assets/Giveaway 1.svg" alt="" />
         <p class="summary">
-          Sa11y is a helpful resource that provides easy-to-follow steps for
-          <strong class="italic">beginners</strong> to review websites for
-          accessibility issues.
+          Sa11y is a resource that provides easy-to-follow steps for
+          <strong>beginners</strong> to review websites for accessibility
+          issues.
         </p>
       </div>
     </header>
@@ -96,22 +95,32 @@
               <li>Robust</li>
             </ul>
             <p>
-              Each of which is further divided into 13 guidelines associated
-              with testable success criteria. The success criteria are divided
-              into three levels of conformance, known as levels A, AA, and AAA.
+              There are then 13 guidelines associated with testable success
+              criteria for each principle, which are further divided into three
+              levels of conformance, namely levels A, AA, and AAA.
             </p>
             <p>
-              If you're feeling overwhelmed, don't worry. sa11y is a resource
-              that simplifies some of the guidance from WCAG while gradually
-              introducing you to concepts.
+              If you're feeling overwhelmed, don't worry - we won't dive into
+              the details too much. You don't need any prior knowledge to get
+              started identifying accessibility issues.
             </p>
             <p>
-              Make your way down the page, reviewing each step. By the end, you
-              should have completed a thorough accessibility review. Please
-              don't hesitate to reach out if you encounter any issues or find
-              anything unclear.
+              As you go through the page, attempt each review and if you need
+              additional resources or support, don't hesitate to
+              <a
+                class="external-link"
+                href="https://..."
+                target="_blank"
+                rel="noopener"
+                aria-label="Download aXe extension (opens in new window)"
+              >
+                <span>get support</span
+                ><i class="material-icons">open_in_new</i> </a
+              >.
             </p>
-            <p class="stylised">Be curious, ask questions and have fun!</p>
+            <p class="stylised">
+              <strong>Be curious, ask questions and have fun!</strong>
+            </p>
           </section>
 
           <div class="content-divider"></div>
@@ -269,10 +278,18 @@
               <img src="assets/CathyFreeman_5.jpeg" alt="" />
             </aside>
             <div>
+              <div class="caption-header do">
+                <span class="material-icons caption-icon">check_circle</span>
+                <span class="caption-title">Do</span>
+              </div>
               <div class="caption-text">
-                Cathy Freeman in action at the 2000 Sydney Olympics, wearing her
-                iconic green and gold body suit and white cap, dominating the
-                track event with fierce competition in the backdrop.
+                When writing alternative text (alt text), it is important to
+                take into consideration the image's context and purpose, rather
+                than just describing its contents. For instance, in the image
+                above, stating that it shows a group of marathon runners would
+                be accurate, but it may also be important to include additional
+                context such as Cathy Freeman's victory, representing Australia
+                at the Sydney 2000 Olympic Games.
               </div>
             </div>
 
@@ -285,13 +302,11 @@
                 backdrop."</code
               >
             </p>
-            <strong>Poor alt text: </strong>
+            <strong>Accurate alt text: </strong>
             <p><code>alt="A group of marathon runners."</code></p>
             <strong>Bad alt text: </strong>
             <p><code>alt="image2343.jpeg"</code></p>
-            <p class="italic">
-              Avoid at all cost using the image name as alt text.
-            </p>
+
             <aside class="callout callout-information">
               <div class="icon-wrapper">
                 <i class="material-icons">favorite</i>
