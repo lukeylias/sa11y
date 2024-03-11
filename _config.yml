@@ -1,9 +1,9 @@
 title: sa11y
 email: lukeylias@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Sa11y is a helpful tool that provides easy-to-follow steps for beginners to review a website for accessibility issues.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://sa11y.com" # the base hostname & protocol for your site
+description: >-
+  sa11y is a tool that provides easy-to-follow steps for beginners to review website accessibility.
+baseurl: ""
+url: "http://sa11y.com"
 
 # Build settings
 markdown: kramdown
