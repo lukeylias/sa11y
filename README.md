@@ -1,6 +1,6 @@
 # sa11y
 
-![Illustration of a girl using a magnifying glass to follow a path](assets/cover.png "Optional Title")
+![Illustration of a girl using a magnifying glass to follow a path](assets/readme.svg"Optional Title")
 
 ## About
 
