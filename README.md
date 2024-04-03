@@ -1,6 +1,6 @@
 # sa11y
 
-![Illustration of a girl using a magnifying glass to follow a path](assets/readme.svg"Optional Title")
+![Illustration of a girl using a magnifying glass to follow a path](assets/readme.svg)
 
 ## About
 
@@ -9,7 +9,7 @@ Whether you are a designer, developer, student, or business owner, it helps you 
 
 sa11y documentation covers the following points;
 
-- Images (ALt text)
+- Images (Alt text)
 - Headings and structure
 - Colours
 - Fonts
