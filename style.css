@@ -1,0 +1,647 @@
+:root {
+  /* Font family */
+  --font-family-sans: "Figtree", sans-serif;
+
+  /* Font weight */
+  --font-weight-regular: 450;
+  --font-weight-medium: 550;
+  --font-weight-semibold: 650;
+  --font-weight-bold: 700;
+
+  /* Letter spacing */
+  --font-letter-spacing-densest: -0.54px;
+  --font-letter-spacing-denser: -0.3px;
+  --font-letter-spacing-dense: -0.2px;
+  --font-letter-spacing-normal: 0px;
+
+  /* Font size */
+  --font-size-300: 0.75rem; /* 12px/16px */
+  --font-size-325: 0.8125rem; /* 13px/16px */
+  --font-size-350: 0.875rem; /* 14px/16px */
+  --font-size-400: 1rem; /* 16px/16px */
+  --font-size-500: 1.25rem; /* 20px/16px */
+  --font-size-600: 1.5rem; /* 24px/16px */
+  --font-size-750: 1.875rem; /* 30px/16px */
+  --font-size-900: 2.25rem; /* 36px/16px */
+  --font-size-1000: 2.8rem;
+
+  /* Line height */
+  --font-line-height-300: 12px;
+  --font-line-height-400: 16px;
+  --font-line-height-500: 20px;
+  --font-line-height-600: 24px;
+  --font-line-height-800: 32px;
+  --font-line-height-1000: 40px;
+  --font-line-height-1200: 48px;
+
+  /* The default background color of the admin. */
+  --color-bg: rgba(244, 240, 247, 1);
+
+  /* The background color for elements with the highest level of prominence, like a card. */
+  --color-bg-surface: rgba(255, 255, 255, 1);
+
+  /* The hover state color for elements with the highest level of prominence. */
+  --color-bg-surface-hover: rgba(247, 247, 247, 1);
+
+  /* The active state color for elements with the highest level of prominence. */
+  --color-bg-surface-active: rgba(243, 243, 243, 1);
+
+  /* The selected state color for elements with the highest level of prominence. */
+  --color-bg-surface-selected: rgba(241, 241, 241, 1);
+
+  /* The primary text color. */
+  --color-text: rgba(59, 44, 125, 1);
+
+  /* The secondary text color. */
+  --color-text-secondary: rgba(97, 97, 97, 1);
+
+  /* The disabled state text color. */
+  --color-text-disabled: rgba(181, 181, 181, 1);
+
+  /* The background fill color. */
+  --color-bg-fill: rgba(255, 255, 255, 1);
+
+  /* The hover state background fill color. */
+  --color-bg-fill-hover: rgba(250, 250, 250, 1);
+
+  /* The active state background fill color. */
+  --color-bg-fill-active: rgba(247, 247, 247, 1);
+
+  /* No shadow. */
+  --shadow-0: none;
+
+  /* Very light shadow for small elements like icons. */
+  --shadow-100: 0px 1px 0px 0px rgba(26, 26, 26, 0.07);
+
+  /* Light shadow for small input fields and buttons. */
+  --shadow-200: 0px 3px 1px -1px rgba(26, 26, 26, 0.07);
+
+  /* Medium shadow for modals and popovers. */
+  --shadow-300: 0px 4px 6px -2px rgba(26, 26, 26, 0.2);
+
+  /* Heavy shadow for large dropdowns and panels. */
+  --shadow-400: 0px 8px 16px -4px rgba(26, 26, 26, 0.22);
+
+  /* Border radii */
+  /* No border radius. */
+  --border-radius-0: 0px;
+
+  /* Very small border radius for slight rounding. */
+  --border-radius-050: 2px;
+
+  /* Small border radius for buttons and input fields. */
+  --border-radius-100: 4px;
+
+  /* Medium-small border radius for modal and card edges. */
+  --border-radius-150: 6px;
+
+  /* Medium border radius for larger elements. */
+  --border-radius-200: 8px;
+
+  /* Medium-large border radius for grouped elements. */
+  --border-radius-300: 12px;
+
+  /* Large border radius for standout elements. */
+  --border-radius-400: 16px;
+
+  /* Very large border radius for thematic components. */
+  --border-radius-500: 20px;
+
+  /* Extra-large border radius for special cases. */
+  --border-radius-750: 30px;
+
+  /* Circular border radius. */
+  --border-radius-full: 9999px;
+
+  /* Border widths */
+  /* No border. */
+  --border-width-0: 0px;
+
+  /* Very thin border. */
+  --border-width-0165: 0.66px;
+
+  /* Thin border for subtle definition. */
+  --border-width-025: 1px;
+
+  /* Standard border for visible separation. */
+  --border-width-050: 2px;
+
+  /* Thick border for emphasis. */
+  --border-width-100: 4px;
+
+  /* Standard border color. */
+  --color-border: rgba(227, 227, 227, 1);
+
+  /* Hover state border color. */
+  --color-border-hover: rgba(204, 204, 204, 1);
+
+  /* Disabled state border color. */
+  --color-border-disabled: rgba(235, 235, 235, 1);
+}
+
+/* CSS Reset */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.heading-display {
+  font-size: var(--font-size-1000);
+  line-height: var(--font-line-height-1200);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-letter-spacing-densest);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.heading-3xl {
+  font-size: var(--font-size-900);
+  line-height: var(--font-line-height-1200);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-letter-spacing-densest);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.heading-2xl {
+  font-size: var(--font-size-750);
+  line-height: var(--font-line-height-1000);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-letter-spacing-denser);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.heading-xl {
+  font-size: var(--font-size-600);
+  line-height: var(--font-line-height-800);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--font-letter-spacing-dense);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.heading-lg {
+  font-size: var(--font-size-500);
+  line-height: var(--font-line-height-600);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--font-letter-spacing-dense);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.heading-md {
+  font-size: var(--font-size-350);
+  line-height: var(--font-line-height-500);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--font-letter-spacing-normal);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.heading-sm {
+  font-size: var(--font-size-325);
+  line-height: var(--font-line-height-500);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--font-letter-spacing-normal);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+}
+
+.body-display {
+  font-size: var(--font-size-600);
+  line-height: var(--font-line-height-800);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-letter-spacing-dense);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  max-width: 60ch;
+}
+
+.body-lg {
+  font-size: var(--font-size-500);
+  line-height: var(--font-line-height-800);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-letter-spacing-normal);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  max-width: 60ch;
+
+  overflow-wrap: break-word;
+}
+
+.body-md {
+  font-size: var(--font-size-400);
+  line-height: var(--font-line-height-600);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-letter-spacing-normal);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  max-width: 60ch;
+}
+
+.body-sm {
+  font-size: var(--font-size-300);
+  line-height: var(--font-line-height-500);
+  font-weight: var(--font-weight-regular);
+  letter-spacing: var(--font-letter-spacing-normal);
+  font-family: var(--font-family-sans);
+  color: var(--color-text);
+  max-width: 60ch;
+
+  overflow-wrap: break-word;
+}
+
+.margin-bottom-xs {
+  margin-bottom: 0.25em;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 0.5em;
+}
+
+.margin-bottom-md {
+  margin-bottom: 1em;
+}
+
+.margin-bottom-lg {
+  margin-bottom: 1.5em;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 2em;
+}
+
+.margin-bottom-2xl {
+  margin-bottom: 3em;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-bg);
+  font-family: var(--font-family-sans);
+}
+
+header {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  color: #1d1d1d;
+  margin-bottom: 2.5rem;
+}
+
+article {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.mid-txt {
+  text-align: center;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-link-wrapper {
+  display: flex;
+  gap: 1.6rem;
+  padding: 12px;
+  list-style: none; /* Removes the default list styling */
+}
+
+.nav-link {
+  color: var(--color-text);
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none; /* Removes the default link underline */
+}
+
+.nav-link:hover {
+  color: var(--color-text-hover); /* Changes the color on hover */
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  max-width: 540px;
+}
+
+.image-400 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.image-300 {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-border);
+}
+
+.about-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 90px 0;
+  justify-content: center;
+}
+
+.content-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+  margin: 4rem auto;
+}
+
+.playbook-wrapper {
+  text-align: left;
+  max-width: 60ch;
+  overflow-wrap: break-word;
+}
+
+.toc-wrapper {
+  flex: 0 0 20%;
+  min-width: 200px;
+  padding: 32px;
+}
+
+.utility-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.utility-button:hover {
+  background-color: #f1f1f1;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: var(--color-text); /* Adjust the color as needed */
+  width: 24px;
+  height: 24px;
+}
+
+.checklist {
+  list-style: none;
+  padding: 0;
+}
+
+.checklist li {
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.checklist li:hover {
+  background-color: #f1f1f1;
+}
+
+.checklist input[type="checkbox"] {
+  margin-right: 1rem;
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  accent-color: var(--color-text);
+  margin-top: 0.5rem;
+}
+
+.checklist label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.checklist .heading-lg {
+  font-weight: bold;
+}
+
+.checklist .body-md {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.checklist input[type="checkbox"]:checked + label .heading-lg {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.checklist input[type="checkbox"]:checked + label .body-md {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+/* Mobile styles */
+@media only screen and (max-width: 600px) {
+  .nav-link-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  article {
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+  }
+
+  .image-300 {
+    max-width: 300px;
+  }
+
+  .reverse-order {
+    flex-direction: column-reverse;
+  }
+  aside {
+    display: none;
+  }
+}
+
+/* Tablet styles */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .nav-link-wrapper {
+    gap: 1rem;
+  }
+
+  article {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+  .image-300 {
+    max-width: 300px;
+  }
+  .reverse-order {
+    flex-direction: column-reverse;
+  }
+
+  aside {
+    display: none;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1025px) {
+  /* Your existing styles are already targeting desktop, so no changes needed here */
+}
