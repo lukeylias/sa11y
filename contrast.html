@@ -41,12 +41,12 @@
       <nav class="main-nav">
         <div class="logo">
           <a href="index1.html">
-            <img src="assets/logo.svg" alt="sa11y logo" />
+            <img src="images/sa11y-logo.svg" alt="sa11y logo" />
           </a>
         </div>
         <ul class="nav-link-wrapper">
           <li>
-            <a class="nav-link" href="index1.html">Fundamentals</a>
+            <a class="nav-link" href="index1.html">Overview</a>
           </li>
           <li>
             <a class="nav-link" href="contact.html">Resources</a>
@@ -56,9 +56,10 @@
     </header>
     <main>
       <!-- Hero section -->
-      <section class="hero">
+      <section class="hero-alt">
+        <a class="body-md" href="index1.html"> &larr; Back </a>
         <div class="content-wrapper">
-          <h1 class="heading-display">Ensure text contrast</h1>
+          <h1 class="heading-3xl">Ensure text contrast</h1>
         </div>
       </section>
       <hr class="divider" />
@@ -68,14 +69,18 @@
       <section class="content-section">
         <article>
           <div class="playbook-wrapper">
-            <h2 class="heading-2xl margin-bottom-sm">What is text contrast?</h2>
+            <h2 id="section1" class="heading-2xl margin-bottom-sm">
+              What is text contrast?
+            </h2>
             <p class="body-lg margin-bottom-lg">
               Text contrast refers to the difference in lightness and color
               between text and its background. Sufficient contrast makes text
               readable for users with visual impairments, including those with
               color blindness or low vision.
             </p>
-            <h2 class="heading-2xl margin-bottom-sm">Best practices</h2>
+            <h2 id="section2" class="heading-2xl margin-bottom-sm">
+              Best practices
+            </h2>
             <p class="body-lg margin-bottom-lg">
               Ensuring proper text contrast is crucial for making your content
               accessible to all users. Here are some best practices to help you
@@ -132,8 +137,32 @@
                 </p>
               </li>
             </ul>
+            <div style="position: relative; padding-bottom: 56.25%">
+              <iframe
+                style="
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;
+                  left: 0px;
+                  top: 0px;
+                "
+                src="https://embed.app.guidde.com/playbooks/hBpXnDGU7tYWtRfjZymewU"
+                title="Check Alt text on images"
+                frameborder="0"
+                referrerpolicy="unsafe-url"
+                allowfullscreen="true"
+                allow="clipboard-write"
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-scripts allow-forms allow-same-origin allow-presentation"
+              ></iframe>
+            </div>
+            <p style="display: none">
+              00:05: This guide covered the steps required to Check Alt text on
+              images in Nib.
+            </p>
             <hr class="divider margin-bottom-2xl margin-top-2xl" />
-            <h2 class="heading-2xl margin-bottom-sm">How to test</h2>
+            <h2 id="section3" class="heading-2xl margin-bottom-sm">
+              How to test
+            </h2>
             <ul class="custom-list">
               <li>
                 <h3 class="heading-lg margin-bottom-sm">Use automated tools</h3>
@@ -182,7 +211,7 @@
               </li>
             </ul>
 
-            <h2 class="heading-xl margin-bottom-sm">Checklist</h2>
+            <h3 class="heading-xl margin-bottom-sm">Checklist</h3>
             <ul class="checklist">
               <li>
                 <input type="checkbox" id="check1" />
@@ -221,7 +250,9 @@
               </li>
             </ul>
             <hr class="divider margin-bottom-2xl margin-top-2xl" />
-            <h2 class="heading-2xl margin-bottom-sm">WCAG Success criteria</h2>
+            <h2 id="section4" class="heading-2xl margin-bottom-sm">
+              WCAG Success criteria
+            </h2>
             <a
               href="https://example.com"
               class="utility-button"
@@ -273,7 +304,9 @@
               </div>
             </a>
             <hr class="divider margin-bottom-2xl margin-top-2xl" />
-            <h2 class="heading-2xl margin-bottom-sm">Resources</h2>
+            <h2 id="section5" class="heading-2xl margin-bottom-sm">
+              Resources
+            </h2>
             <a
               href="https://example.com"
               class="utility-button"
@@ -305,16 +338,71 @@
           <h2 class="heading-lg">Table of Contents</h2>
           <nav>
             <ul>
-              <li><a href="#section1">Section 1</a></li>
-              <li><a href="#section2">Section 2</a></li>
-              <li><a href="#section3">Section 3</a></li>
-              <!-- Add more list items as needed -->
+              <li>
+                <a class="body-md" href="#section1">What is text contrast?</a>
+              </li>
+              <li><a class="body-md" href="#section2">Best practices</a></li>
+              <li><a class="body-md" href="#section3">How to test</a></li>
+              <li>
+                <a class="body-md" href="#section4">WCAG Success criteria</a>
+              </li>
+              <li><a class="body-md" href="#section5">Resources</a></li>
             </ul>
           </nav>
         </aside>
       </section>
-      <hr class="divider" />
+      <hr class="divider margin-bottom-2xl margin-top-2xl" />
+      <div class="feedback-component">
+        <div class="feedback-content">
+          <div class="feedback-text">
+            <div class="feedback-header">
+              <h2 class="heading-xl">Help improve this page</h2>
+            </div>
+            <div class="feedback-body">
+              <p class="body-lg margin-bottom-sm">
+                If you have any feedback, questions, or issues, please feel free
+                to email me at
+                <a href="mailto:support@sa11y.com" class="feedback-link"
+                  >support@sa11y.com</a
+                >.
+              </p>
+              <p class="disclaimer body-md">
+                This page outlines my general approach to accessibility
+                auditing, which is based on WCAG practices, industry experience,
+                research, and data insights. Although I have tried to simplify
+                the process of accessibility auditing, it is still a developing
+                field with diverse views and methodologies. If you are ever
+                unsure, it is best to refer to WCAG and seek insight from users
+                with lived experiences.
+              </p>
+            </div>
+          </div>
+          <figure class="feedback-image">
+            <img
+              class="image-300"
+              src="images/312.New-Idea 1.svg"
+              alt="Construction worker building a wall"
+            />
+          </figure>
+        </div>
+      </div>
     </main>
+    <hr class="divider margin-top-2xl" />
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>© 2024 sa11y.</p>
+          <p>
+            Illustrations by
+            <a href="https://example.com" class="footer-link">Mary Amato</a>
+          </p>
+        </div>
+        <ul class="footer-nav">
+          <li><a href="index1.html" class="footer-link">Overview</a></li>
+          <li><a href="/resources" class="footer-link">Resources</a></li>
+        </ul>
+      </div>
+    </footer>
   </body>
   <script src="scripts.js"></script>
 </html>

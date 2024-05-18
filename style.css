@@ -233,12 +233,19 @@ video {
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "GT Maru";
+  src: url("/assets/GT-Maru-Mega-Mini-Trial.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .heading-display {
-  font-size: var(--font-size-1000);
+  font-size: 120px;
   line-height: var(--font-line-height-1200);
   font-weight: var(--font-weight-bold);
   letter-spacing: var(--font-letter-spacing-densest);
-  font-family: var(--font-family-sans);
+  font-family: "GT Maru";
   color: var(--color-text);
 }
 
@@ -396,6 +403,7 @@ body {
   padding: 0;
   background-color: var(--color-bg);
   font-family: var(--font-family-sans);
+  scroll-behavior: smooth;
 }
 
 header {
@@ -433,6 +441,12 @@ a:hover {
   text-decoration: underline;
 }
 
+.logo img {
+  width: 60px;
+  height: auto;
+  max-width: 100%;
+}
+
 .mid-txt {
   text-align: center;
 }
@@ -462,12 +476,65 @@ a:hover {
   color: var(--color-text-hover); /* Changes the color on hover */
 }
 
+footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--background-color);
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-left p {
+  margin: 0;
+  font-size: var(--font-size-400);
+  color: var(--color-text);
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.6rem;
+  list-style: none; /* Removes the default list styling */
+  padding: 0; /* Removes padding */
+  margin: 0; /* Removes margin */
+}
+
+.footer-link {
+  color: var(--color-text);
+  font-size: var(--font-size-400);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none; /* Removes the default link underline */
+}
+
+.footer-link:hover {
+  color: var(--color-text-hover); /* Changes the color on hover */
+}
+
 .hero {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+}
+
+.hero-alt {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 1.5rem;
+  padding: 0 32px;
 }
 
 .hero-content {
@@ -508,6 +575,7 @@ a:hover {
   flex-direction: column;
   padding: 90px 0;
   justify-content: center;
+  align-items: center;
 }
 
 .content-section {
@@ -524,7 +592,6 @@ a:hover {
 }
 
 .toc-wrapper {
-  flex: 0 0 20%;
   min-width: 200px;
   padding: 32px;
   position: sticky;
@@ -630,6 +697,42 @@ a:hover {
   background-image: url(/Images/list-bullet.svg);
   background-size: cover;
   content: "";
+}
+.feedback-component {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1.5rem 2rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-content {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-text {
+  flex: 1;
+}
+
+.feedback-link {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+.feedback-link:hover {
+  text-decoration: underline;
+}
+
+.feedback-image {
+  flex-shrink: 0;
 }
 
 /* Mobile styles */
