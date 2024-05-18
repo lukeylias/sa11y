@@ -364,6 +364,30 @@ video {
   margin-bottom: 3em;
 }
 
+.margin-top-xs {
+  margin-top: 0.25em;
+}
+
+.margin-top-sm {
+  margin-bottom: 0.5em;
+}
+
+.margin-top-md {
+  margin-top: 1em;
+}
+
+.margin-top-lg {
+  margin-top: 1.5em;
+}
+
+.margin-top-xl {
+  margin-top: 2em;
+}
+
+.margin-top-2xl {
+  margin-top: 3em;
+}
+
 html,
 body {
   height: 100%;
@@ -503,6 +527,8 @@ a:hover {
   flex: 0 0 20%;
   min-width: 200px;
   padding: 32px;
+  position: sticky;
+  top: 80px;
 }
 
 .utility-button {
@@ -576,23 +602,34 @@ a:hover {
   flex-grow: 1;
 }
 
-.checklist .heading-lg {
-  font-weight: bold;
-}
-
-.checklist .body-md {
-  font-size: 0.875rem;
-  color: #666;
-}
-
-.checklist input[type="checkbox"]:checked + label .heading-lg {
-  text-decoration: line-through;
-  color: #999;
-}
-
-.checklist input[type="checkbox"]:checked + label .body-md {
+.checklist input[type="checkbox"]:checked + label .body-lg {
   text-decoration: line-through;
   color: #bbb;
+}
+
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+
+.custom-list li::before {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: -8px;
+  width: 12px;
+  height: 12px;
+  color: var(--color-text);
+  background-image: url(/Images/list-bullet.svg);
+  background-size: cover;
+  content: "";
 }
 
 /* Mobile styles */
