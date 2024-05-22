@@ -735,6 +735,109 @@ footer {
   flex-shrink: 0;
 }
 
+.accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accordion-item {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.accordion-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.accordion-item-icon {
+  font-size: 24px; /* Adjust the size as needed */
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.active .accordion-item-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-item-content {
+  display: none;
+  padding-top: 1rem;
+  color: var(--color-text);
+}
+
+.accordion-item.active .accordion-item-content {
+  display: block;
+}
+
+.cards-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: start;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.card-icon {
+  font-size: 48px;
+  color: var(--color-text); /* Customize the color as needed */
+  background-color: #dbd9f6; /* Customize the background color as needed */
+  border-radius: 50%;
+  padding: 10px;
+  align-self: start;
+}
+
+.content-wrapper {
+  flex: 1;
+}
+
+.card .content-wrapper {
+  justify-content: start;
+}
+
+.card a {
+  margin-top: auto;
+  color: var(--color-text);
+  text-decoration: none;
+  font-weight: var(--font-weight-semibold);
+  display: flex;
+  align-items: center;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
 /* Mobile styles */
 @media only screen and (max-width: 600px) {
   .nav-link-wrapper {
